@@ -19,6 +19,9 @@
 :root {
   --swiper-theme-color: #2e2e2e;
 }
+.swiper-total{
+  position: relative;
+}
 .swiper-container {
   margin-left: auto;
   margin-right: auto;
@@ -35,7 +38,7 @@
 .swiper-wrapper {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 80%;
   z-index: 1;
   display: flex;
   transition-property: transform;
@@ -141,7 +144,7 @@
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 50%;
+  top: 40%;
   width: calc(var(--swiper-navigation-size) / 44 * 27);
   height: var(--swiper-navigation-size);
   margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
@@ -161,7 +164,7 @@
 .swiper-button-prev:after,
 .swiper-button-next:after {
   font-family: swiper-icons;
-  font-size: var(--swiper-navigation-size);
+  font-size: 25px;
   text-transform: none !important;
   letter-spacing: 0;
   text-transform: none;
@@ -170,7 +173,7 @@
 }
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
-  left: 10px;
+  left: -35px;
   right: auto;
 }
 .swiper-button-prev:after,
@@ -179,7 +182,7 @@
 }
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
-  right: 10px;
+  right: -35px;
   left: auto;
 }
 .swiper-button-next:after,
@@ -197,11 +200,11 @@
 .swiper-button-lock {
   display: none;
 }
-:root {
+/* :root { */
   /*
   --swiper-pagination-color: var(--swiper-theme-color);
   */
-}
+/* } */
 .swiper-pagination {
   position: absolute;
   text-align: center;
