@@ -21,3 +21,38 @@ flex :숫자는 축약법 된거임 li에 정해놓고 li 개별 잡아서 값�
 flex basis:100px 베이시스는 크기이다 이게 플렉스보다 더 우선순위에 있다. 
 
 오토 리네임 태그
+       
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+best seller 에서 ul li a 의 a 태그를 막는 방법
+ 1. href 속성을 'javascript:void(0);'으로 지정해준다.
+-> 자바스크립트에서 void(0)은 undefined라서 반환해주는 것 없이 현재 페이지 유지
+ex )
+
+<a href='javascript:void(0);'>페이지 이동x</a>
+
+
+ 2. preventDefault() 사용하기
+->preventDefault 메소드는 이벤트를 취소할때 사용하는 메소드로서 클릭 이벤트를 취소하여 페이지 이동을 막을 수 있습니다.
+
+ex)
+
+a태그를 클릭하면 onClick속성에 정의되어 있는 함수가 실행되고 preventDefalut()에 의하여 클릭이벤트가 취소
+
+<a href='javascript:void(0)' id='test' onclick='preventClick(event)'>클릭</a>
+
+function preventClick(e){
+	e.preventDefalut()
+}
+
+
+스와이퍼 flex wrap 없애고 direction을 칼럼으로 선택 후 저스티스파이를 center로 ,.., align도 삭제해도 된다.

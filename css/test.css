@@ -4,21 +4,81 @@ html,
       height: 100%;
     }
 
-    body {
-      background: red;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
+  
+    @media screen and (min-width: 1480px){
+      dl{
+        max-width: 300px;
+      }
+      section.swiperArea{
+        padding-top: 100px;
+      }
+      .bestSeller>div h2{
+        margin-bottom: 60px; text-align: center;
+      }
+      .bestSeller>div ul{
+        width: 50%; margin: 0 auto; 
+      }
+      .bestSeller>div ul li{
+        text-align: center;
+        width: 33.33%; line-height: 80px; float: left; list-style: none;
+      }
+      .bestSeller>div ul::after{
+        content: ''; display: block; clear: both; visibility: hidden;
+      }
+      .bestSeller>div ol li{
+        list-style: none; display: none; 
+      }
+      .bestSeller>div ol li.slide_active{
+        display: block;
+      }
+      
+      li.name .swiper-container .swiper-wrapper .swiper-slide{
+        display: flex; flex-wrap: wrap; align-content: center;
+        border-bottom: 0.1px solid rgba(70, 70, 70, 0.7); box-sizing: border-box;
+      }
+      li.name .swiper-container .swiper-wrapper .swiper-slide:hover{
+        border-bottom: 0.1px solid rgba(70, 70, 70, 1); 
+      }
+      
+      li.name .swiper-container .swiper-wrapper .swiper-slide img{
+        opacity: 1;
+        width: 100%; max-width: 300px; margin-bottom: 30px; transition: transform 0.2s;
+      }
+      li.name .swiper-container .swiper-wrapper .swiper-slide img:hover{
+        transform: scale(1.1); 
+      }
+      li.name .swiper-container .swiper-wrapper .swiper-slide:hover:nth-child(1){
+        opacity: 0.5;
+      }
+      .swiper-slide dl>*{
+        margin-bottom: 15px;
+      }
+      dl dt{
+        width: 300px;
+      }
+      dl dd{
+        margin: 0 auto;
+      }
+    
+    
+    
     }
 
+    
+
     .swiper-container {
-      width: 80%;
-      height: 80%;
+      width: 100%;
+      height: auto;
+
+    }
+    .name .swiper-container {
+      margin-bottom: 100px;
+      
     }
 
     .swiper-slide {
+      box-sizing: border-box;
+      min-height: 540px;
       text-align: center;
       font-size: 18px;
       background: #fff;
@@ -36,4 +96,9 @@ html,
       -ms-flex-align: center;
       -webkit-align-items: center;
       align-items: center;
+    }
+
+    .name .swiper-slide,
+    .swiper-slide dl{
+      margin-bottom: 50px;
     }

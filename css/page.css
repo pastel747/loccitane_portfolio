@@ -30,7 +30,7 @@ html,
       }
       li.name .swiper-container .swiper-wrapper .swiper-slide{
         display: flex; flex-wrap: wrap; align-content: center;
-        border-bottom: 0.1px solid rgba(70, 70, 70, 0.2); box-sizing: border-box;
+        border-bottom: 0.1px solid rgba(70, 70, 70, 0.3); box-sizing: border-box;
       }
       li.name .swiper-container .swiper-wrapper .swiper-slide:hover{
         border-bottom: 0.1px solid rgba(70, 70, 70, 1); 
@@ -41,10 +41,10 @@ html,
         width: 100%; max-width: 300px; margin-bottom: 30px; transition: transform 0.2s;
       }
       li.name .swiper-container .swiper-wrapper .swiper-slide img:hover{
-        transform: scale(1.1); 
+        transform: scale(1.1); opacity: 0.5; 
       }
-      li.name .swiper-container .swiper-wrapper .swiper-slide:hover:nth-child(1){
-        opacity: 0.5;
+      li.name .swiper-container .swiper-wrapper .swiper-slide:hover dl dt{
+        font-weight: 600; color: rgba(90, 41, 8, 0.8s);
       }
       .swiper-slide dl>*{
         margin-bottom: 15px;
@@ -55,11 +55,19 @@ html,
     
     }
 
-
-
-    .swiper-container {
+    .swiperArea .swiper-container{
       width: 100%;
-      height: 750px;
+      height: 650px;
+    }
+
+    .name .swiper-container {
+      width: 100%;
+      height: auto;
+
+    }
+    .name .swiper-container {
+      margin-bottom: 100px;
+      
     }
 
     .swiper-slide {
@@ -82,3 +90,7 @@ html,
       align-items: center;
     }
 
+    .name .swiper-slide,
+    .swiper-slide dl{
+      margin-bottom: 50px;
+    }
