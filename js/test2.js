@@ -1,11 +1,49 @@
 $(document).ready(function(){
-    swiperSetting2();
-    swiperSetting3();
-    swiperSetting4();
+    // swiperSetting2();
+    // swiperSetting3();
+    // swiperSetting4();
     bestSellerClick();
+    test();
 });
 
-
+function test(){
+    var swiper1 = new Swiper('.a1', {
+        slidesPerView: 3,
+        // slidesPerGroup : 3,
+        pagination: {
+            el: '.test1',
+            clickable: true,
+          },
+        navigation: {
+            nextEl: '.b1_1',
+            prevEl: '.b1_2',
+          },
+    });
+    var swiper2 = new Swiper('.a2', {
+        slidesPerView: 3,
+        // slidesPerGroup : 3,
+        pagination: {
+            el: '.test2',
+            clickable: true,
+          },
+        navigation: {
+            nextEl: '.b2_1',
+            prevEl: '.b2_2',
+          },
+    });
+    var swiper3 = new Swiper('.a3', {
+        slidesPerView: 3,
+        // slidesPerGroup : 3,
+        pagination: {
+            el: '.test3',
+            clickable: true,
+          },
+        navigation: {
+            nextEl: '.b3_1',
+            prevEl: '.b3_2',
+          },
+    });
+}
 
 function swiperSetting2(){
     // var swiper2 = new Swiper('.name .swiper-container', {
@@ -19,14 +57,15 @@ function swiperSetting2(){
     //         clickable: true,
     //       },
     // });
-    var swiper3 = new Swiper('.name5 .swiper-container', {
+    var swiper3 = new Swiper('.a1', {
         slidesPerView: 3,
+        slidesPerGroup : 3,
         navigation: {
-            nextEl: '.name5 .swiper-button-next',
-            prevEl: '.name5 .swiper-button-prev',
+            nextEl: '.b1_1',
+            prevEl: '.b1_2',
           },
         pagination: {
-            el: '.name5 .swiper-pagination',
+            el: '.test1',
             clickable: true,
           },
     });
@@ -39,14 +78,15 @@ function swiperSetting2(){
 
 
 function swiperSetting3(){
-    var swiper4 = new Swiper('.name6 .swiper-container', {
+    var swiper4 = new Swiper('.a2', {
         slidesPerView: 3,
+        slidesPerGroup : 3,
         navigation: {
-            nextEl: '.name6 .swiper-button-next',
-            prevEl: '.name6 .swiper-button-prev',
+            nextEl: '.b2_1',
+            prevEl: '.b2_2',
           },
         pagination: {
-            el: '.name6 .swiper-pagination',
+            el: '.test2',
             clickable: true,
           },
     });
@@ -57,14 +97,15 @@ function swiperSetting3(){
 
 
 function swiperSetting4(){
-    var swiper2 = new Swiper('.name7 .swiper-container', {
+    var swiper5 = new Swiper('.a3', {
         slidesPerView: 3,
+        slidesPerGroup : 3,
         navigation: {
-            nextEl: '.name7 .swiper-button-next',
-            prevEl: '.name7 .swiper-button-prev',
+            nextEl: '.b3_1',
+            prevEl: '.b3_2',
           },
         pagination: {
-            el: '.name7 .swiper-pagination',
+            el: '.test3',
             clickable: true,
           },
     });
