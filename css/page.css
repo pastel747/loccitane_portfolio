@@ -4,7 +4,86 @@ html,
       height: 100%;
     }
 
-  
+    
+    @media screen and (min-width: 768px) and (max-width: 1479px){
+      section.swiperArea{
+        padding-top: 100px; margin-bottom: 50px;
+      }
+
+
+
+      .bestSeller>div h2{
+        margin-bottom: 60px; text-align: center;
+      }
+      .bestSeller>div ul{
+        width: 50%; margin: 0 auto; 
+      }
+      .bestSeller>div ul li{
+        text-align: center;
+        width: 33.33%; line-height: 80px; float: left; list-style: none;
+      }
+      .bestSeller>div ul::after{
+        content: ''; display: block; clear: both; visibility: hidden;
+      }
+      .bestSeller>div ol li{
+        list-style: none; display: none;
+      }
+      .bestSeller>div ol li.slide_active{
+        display: block;
+      }
+      li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide{
+        display: flex; 
+        /* flex-wrap: wrap;  */
+        /* align-content: center; */
+        justify-self: center;
+        flex-direction: column;
+        border-bottom: 0.1px solid rgba(70, 70, 70, 0.3); box-sizing: border-box;
+      }
+      li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide:hover{
+        border-bottom: 0.1px solid rgba(70, 70, 70, 1); 
+      }
+      
+      li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide img{
+        opacity: 1;
+        width: 100%; max-width: 300px; margin-bottom: 30px; transition: transform 0.2s;
+      }
+      li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide img:hover{
+        transform: scale(1.1); opacity: 0.5; 
+      }
+      li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide:hover dl dt{
+        font-weight: 600; color: rgba(90, 41, 8, 0.8s);
+      }
+      .swiper-slide dl>*{
+        margin-bottom: 15px;
+      }
+      dl dt{
+        width: 300px;
+      }
+      .name .swiper-total .swiper-container .swiper-wrapper .swiper-slide,
+      .swiper-slide dl{
+        margin-bottom: 50px;
+      }
+
+    .banner{
+      width: 100%; height: 300px; margin-bottom: 1000px;
+    }
+    .banner::after{
+      content: ''; display: block; clear: both; visibility: hidden;
+    }
+    .banner div{
+      width: 50%; height: 300px; float: left;
+    }
+    .banner div:nth-of-type(1){
+      background-color: red;
+    }
+    .banner div:nth-of-type(2){
+      background-color: royalblue;
+    }
+    
+    
+    }
+    /* 타블렛 끝 */
+
     @media screen and (min-width: 1480px){
       section.swiperArea{
         padding-top: 100px; margin-bottom: 50px;

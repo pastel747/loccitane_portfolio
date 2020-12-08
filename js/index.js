@@ -5,6 +5,7 @@ $(document).ready(function(){
     // swiperSetting3();
     // swiperSetting4();
     bestSellerClick();
+    test2();
 });
 
 function swiperSetting2(){
@@ -134,5 +135,14 @@ function test1(){
     if( $('.banner').offset().top < $(window).scrollTop() ){
       $('.banner').removeClass('active');
     }
+  });
+}
+
+
+
+function test2(){
+
+  $('label.mcheck').click(function(){
+    $(this).toggleClass('labelActive');
   });
 }

@@ -1,7 +1,162 @@
 
-body{
-    position: relative;
+
+
+@media screen and (min-width: 768px) and (max-width: 1479px){
+    header>div,
+    footer div,
+    section.bestSeller>div{
+        max-width: 1200px; margin: 0 auto;
+    }
+
+
+    header{
+        position: relative;
+        width: 100%; 
+        height: 100px; 
+        position: fixed; background-color: seagreen; z-index: 100;
+    }
+    header>div h1 a{
+        line-height: 100px; display: block;
+    }
+    header>div h1 a img{
+        width: 100%;
+    }
+    header>div::after{
+        content: ''; display: block; visibility: hidden; clear: both;
+    }
+    header>div h1{
+        max-width: 150px; float: left;
+    }
+    header>div nav{
+        width: 80%; margin-left: 3%; float: right; 
+    }
+    /* header>div nav>ul>li:first-of-type{
+        display: none;
+    } */
+    header>div nav>ul{
+        /* float: left;  */ background-color: rosybrown;
+        position: absolute; right: -50%; top: 100px; width: 0; height: 100vh;
+        /* display: none;  */ opacity: 0;
+        padding-left: 8%; box-sizing: border-box;
+        transition: 0.7s ease-in-out;
+    }
+
+    header>div nav label.mcheck{
+        position: absolute; right: 5%; top: 40px;
+    }
+    header>div nav label.mcheck span{
+        border-bottom: 1px solid #000000; display: block; width: 30px; 
+        margin-bottom: 10px;
+    }
+    header>div nav label.mcheck.labelActive + ul{
+        /* display: block;  */
+        /* width: 45%; */ opacity: 1;
+        /* height: 100vh;  */ width: 40%;
+        right: 0;
+    }
+
+    header>div nav::after{
+        content: ''; display: block; clear: both; visibility: hidden;
+    }
+    header>div>nav>ul>li>a::after{
+        content: 'V'; display: block; float: left;
+    }
+    header>div nav ul>li>a{
+        line-height: 100px; display: block;
+    }
+    /* header>div nav ul>*{
+        float: left; 
+    } */
+    /* header>div nav ul>li{
+        margin-left: 60px;
+        position: relative;
+    } */
+    header>div nav ul li ol{ 
+        height: 0px;
+        /* position: absolute; top: 100px; left: 0; */
+        width: 100%; 
+        box-sizing: border-box; transition: 0.5s ease-in-out; overflow: hidden;
+        background-color: seashell; opacity: 0;
+    }
+    header>div nav ul li ol li:first-child{
+        display: none;
+    }
+    header>div nav>ul>li:hover ol{
+        opacity: 1;
+        height: 350px;
+    }
+    header>div nav ul li ol li{
+        line-height: 50px; list-style: none; width: 50%; 
+    }
+    header>div nav ul li ol li:nth-child(1){
+        font-size: 25px; font-weight: 700; line-height: 60px;
+    }
+    header>div nav ul li ol::after{
+        content: ''; 
+    }
+    header>div nav>div{
+        float: right; padding-right: 20%; box-sizing: border-box;
+    }
+    header>div nav>div a{
+        line-height: 100px; display: inline-block;  
+    }
+    header>div nav>div a{
+        padding-left: 30px;
+    }
+    /* header>div nav ul::after{
+        content: ''; display: block; clear: both; visibility: hidden;
+    } */
+    
+
+
+
+
+
+
+
+
+    footer{
+        background-color: rgb(73, 73, 73); 
+    }
+    footer div{
+        padding: 80px 0;
+    }
+    footer div h2{
+        max-width: 150px; float: left;
+    }
+    footer div h2 a{
+        line-height: 50px; display: block;
+    }
+    footer div h2 a img{
+        width: 100%;
+    }
+    footer div ol{
+        list-style: none; float: right; width: 75%; margin-bottom: 80px; 
+    }
+    footer div::after{
+        content: ''; display: block; clear: both; visibility: hidden;
+    }
+    footer div ol li{
+        float: left; 
+    }
+    footer div ol::after{
+        content: ''; display: block; clear: both; visibility: hidden;
+    }
+    footer div ol li h3{
+        line-height: 60px; 
+    }
+    footer div ol li a{
+        display: block;
+    }
+    footer div ol li:not(:first-of-type){
+        margin-left: 100px; 
+    }
+    footer div>span{
+        width: 100%; background-color: #ffffff; opacity: 0.3;
+        height: 1px; display: block; float: left;
+    }
 }
+    
 
 
 @media screen and (min-width: 1480px){
@@ -130,7 +285,7 @@ body{
         margin-left: 200px;
     }
     footer div>span{
-        width: 1480px; background-color: #ffffff; opacity: 0.3;
+        width: 100%; background-color: #ffffff; opacity: 0.3;
         height: 1px; display: block; float: left;
     }
 }
