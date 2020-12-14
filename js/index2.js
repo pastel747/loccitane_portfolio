@@ -121,24 +121,26 @@ function priceTest3(){
     $('ul.PD_align li.high').click(function(){
         // var length = $('.product_face ol li').length();
 
-        var a = $('.product_face ol li').eq(i).attr('data-price');
-        var a1 = $('.product_face ol li').eq(i)
+        // var a = $('.product_face ol li').eq(i).attr('data-price');
+        // var a1 = $('.product_face ol li').eq(i)
 
         $('.product_face ol li').each(function(){
             var T = $(this).attr('data-price');
-            alert('t='+ T);
-            alert('끝1');
+            $(this).css('order', -T);
+
+            // alert('t='+ T);
+            // alert('끝1');
             
-            if( a>T ){
-                a1.css('background','red');
-            }else{
-                a1.css('background','blue');
-            }
+            // if( a>T ){
+            //     a1.css('background','red');
+            // }else{
+            //     a1.css('background','blue');
+            // }
         });
-        alert('끝2');
+        // alert('끝2');
         
 
-        i++
+        // i++
         // var b = $('.product_face ol li').eq(i).attr('data-price');
 
         // alert(a+'와'+b);
@@ -162,6 +164,39 @@ function priceTest3(){
             // }
         // });
         // alert('끝2');
+        
+    });
+    $('ul.PD_align li.row').click(function(){
+        
+        $('.product_face ol li').each(function(){
+            var T = $(this).attr('data-price');
+            $(this).css('order', T);
+
+        });
+        
+    });
+
+    $('ul.PD_align li.hot').click(function(){
+        
+        $('.product_face ol li').each(function(){
+            $(this).css('order', 0);
+
+            if($(this).hasClass('hot')){
+                $(this).css('order', -1);
+            }
+        });
+        
+    });
+
+    $('ul.PD_align li.new').click(function(){
+        
+        $('.product_face ol li').each(function(){
+            $(this).css('order', 0);
+
+            if($(this).hasClass('new')){
+                $(this).css('order', -1);
+            }
+        });
         
     });
     
