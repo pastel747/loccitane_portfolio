@@ -127,13 +127,13 @@ function bestSellerClick(){
 function test1(){
   
   $(window).scroll(function(){
-    if( $('.banner').offset().top - 500 < $(window).scrollTop() ){
+    if( $('.loccitane_banner').offset().top - 500 < $(window).scrollTop() ){
       // console.log('test');
-      $('.banner').addClass('active');
+      $('.loccitane_banner').addClass('active');
       
     }
-    if( $('.banner').offset().top < $(window).scrollTop() ){
-      $('.banner').removeClass('active');
+    if( $('.loccitane_banner').offset().top < $(window).scrollTop() ){
+      $('.loccitane_banner').removeClass('active');
     }
   });
 }
