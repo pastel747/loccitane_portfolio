@@ -6,6 +6,7 @@ $(document).ready(function(){
     // swiperSetting4();
     bestSellerClick();
     test2();
+    headeropacity();
 });
 
 function swiperSetting2(){
@@ -144,5 +145,11 @@ function test2(){
 
   $('label.mcheck').click(function(){
     $(this).toggleClass('labelActive');
+  });
+}
+
+function headeropacity(){
+  $(window).scroll(function(){
+    var test = $('')
   });
 }

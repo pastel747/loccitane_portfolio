@@ -1,15 +1,13 @@
 html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-
-    .viewbutton{
-      border: 1px solid; line-height: 50px; padding: 0 50px; box-sizing: border-box;
-  }
+body{
+    position: relative;height: 100%;
+}
 
     
-    @media screen and (min-width: 768px) and (max-width: 1479px){
+
+
+    
+@media screen and (min-width: 768px) and (max-width: 1479px){
       section.swiperArea{
         padding-top: 100px; margin-bottom: 100px; height: 100%;
       }
@@ -87,78 +85,81 @@ html,
     }
     
     
-    }
+}
     /* 타블렛 끝 */
 
-    @media screen and (min-width: 1480px){
-      section.swiperArea{
+@media screen and (min-width: 1480px){
+    section.swiperArea{
         padding-top: 100px; margin-bottom: 100px;
-      }
-      section.swiperArea .swiper-container .swiper-wrapper .swiper-slide img{
+    }
+    section.swiperArea .swiper-container .swiper-wrapper .swiper-slide img{
         width: 100%;
-      }
+    }
 
 
-      .bestSeller>div h2{
+    .bestSeller>div h2{
         margin-bottom: 60px; text-align: center;
-      }
-      .bestSeller>div ul{
+    }
+    .bestSeller>div ul{
         width: 50%; margin: 0 auto; 
-      }
-      .bestSeller>div ul li{
+    }
+    .bestSeller>div ul li{
         text-align: center;
         width: 33.33%; line-height: 80px; float: left; list-style: none;
-      }
-      .bestSeller>div ul::after{
+    }
+    .bestSeller>div ul::after{
         content: ''; display: block; clear: both; visibility: hidden;
-      }
-      .bestSeller>div ol li{
+    }
+    .bestSeller>div ol li{
         list-style: none; display: none;
-      }
-      .bestSeller>div ol li.slide_active{
+    }
+    .bestSeller>div ol li.slide_active{
         display: block;
-      }
-      li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide{
+    }
+    li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide{
         display: flex; 
         /* flex-wrap: wrap;  */
         /* align-content: center; */
         justify-self: center;
         flex-direction: column;
         border-bottom: 0.1px solid rgba(70, 70, 70, 0.3); box-sizing: border-box;
-      }
-      li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide:hover{
+    }
+    li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide:hover{
         border-bottom: 0.1px solid rgba(70, 70, 70, 1); 
-      }
+    }
       
-      li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide img{
+    li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide img{
         opacity: 1;
         width: 100%; max-width: 300px; margin-bottom: 30px; transition: transform 0.2s;
-      }
-      li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide img:hover{
+    }
+    li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide img:hover{
         transform: scale(1.1); opacity: 0.5; 
-      }
-      li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide:hover dl dt{
+    }
+    li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide:hover dl dt{
         font-weight: 600; color: rgba(90, 41, 8, 0.8s);
-      }
-      .swiper-slide dl>*{
+    }
+    .swiper-slide dl>*{
         margin-bottom: 15px;
-      }
-      dl dt{
+    }
+    dl dt{
         width: 300px;
-      }
-      .name .swiper-total .swiper-container .swiper-wrapper .swiper-slide,
-      .swiper-slide dl{
+    }
+    .name .swiper-total .swiper-container .swiper-wrapper .swiper-slide,
+    .swiper-slide dl{
         margin-bottom: 50px;
-      }
+    }
 
     .loccitane_banner{
       width: 80%; margin: 0 auto 200px; 
+    }
+    .loccitane_banner h2{
+      display: none;
     }
     .loccitane_banner::after{
       content: ''; display: block; clear: both; visibility: hidden;
     }
     .loccitane_banner div{
-      width: 50%; height: 300px; float: left; 
+      width: 50%; height: 300px; float: left; padding: 5%; box-sizing: border-box;
       
     }
     .loccitane_banner div:nth-of-type(1){
@@ -170,9 +171,15 @@ html,
       background-size: cover;
     }
     
+    .loccitane_banner div p{
+      margin: 0 auto 50px; text-align: center; font-size: 30px; font-family: 'playfairDisplay';
+    }
+    .loccitane_banner div span.viewbutton{
+      margin: 0 auto; 
+    }
 
     .introduce{
-      margin: 0 auto 200px; width: 60%; height: 500px;
+      height: 500px; 
     }
     .introduce::after{
       content: ''; display: block; clear: both; visibility: hidden;
@@ -186,20 +193,24 @@ html,
       background: url('../images/main_introduce.jpg') no-repeat center;
       background-size: cover;
     } */
-    .introduce p{
-      width: 36%; float: right; line-height: 30px;
+    .introduce img{
+      width: 100%; max-width: 700px; float: left; margin-right: 50px;
     }
     .introduce h2{
-       width: 36%; padding-left: 64%; line-height: 80px; margin-bottom: 50px;
-      float: left; position: relative; font-size: 45px;
+      display: inline-block;
+      line-height: 80px; margin-bottom: 50px;
+      font-size: 45px;
     }
-    .introduce h2::before{
+    /* .introduce h2::before{
       content: ''; display: block; height: 500px; width: 60%; position: absolute; left: 0; top: 0;
       background: url('../images/main_introduce.jpg') no-repeat center;
       background-size: cover;
+    } */
+    .introduce p{
+      width: 45%; float: left; line-height: 30px;  margin-bottom: 50px;
     }
-    .introduce span{
-      float: right; 
+    .introduce span.viewbutton{
+      float: left; 
     }
 
 
@@ -212,10 +223,10 @@ html,
       position: absolute; right: 20%; color: #ffffff; 
     }
     .ad_banner .mainAD_product{
-      top: 30%;
+      top: 30%; font-size: 25px; margin-bottom: 15px;
     }
     .ad_banner .mainAD_price{
-      top: 40%;
+      top: 40%; font-size: 23px; 
     }
     .ad_banner span{
       top: 60%;
@@ -223,45 +234,44 @@ html,
 
     
     
-    }
+}
 
 
     
 
 
 
-    .swiperArea .swiper-container{
-      width: 100%;
-      height: 650px;
-    }
+.swiperArea .swiper-container{
+    width: 100%;
+    height: 650px;
+}
 
-    .name .swiper-total .swiper-container {
-      width: 100%;
-      height: auto;
+.name .swiper-total .swiper-container{
+    width: 100%;
+    height: auto;
+}
+.name .swiper-total .swiper-container{
+    margin-bottom: 100px;
+}
 
-    }
-    .name .swiper-total .swiper-container {
-      margin-bottom: 100px;
-    }
+.swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
 
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
 
     

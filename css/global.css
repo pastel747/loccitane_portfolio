@@ -1,5 +1,40 @@
 
+@font-face{
+    font-family: 'Nanum Square'; 
+    font-style: normal;
+    src:url('../font/NanumSquare_acB.ttf'),
+    url('../font/NanumSquare_acEB.ttf'),
+    url('../font/NanumSquare_acL.ttf'),
+    url('../font/NanumSquare_acR.ttf');
+    /* unicode-range: U+AC00-D7A3; */
+}
+@font-face{
+    font-family:'Poppins'; 
+    font-style: normal;
+    src:url('../font/Poppins-Medium.ttf'),
+    url('../font/Poppins-Regular.ttf')
+    url('../font/Poppins-Bold.ttf'),
+    url('../font/Poppins-Light.ttf');
+    /* unicode-range: U+0041-005A, U+0061-007A, U+0030-0039; */
+}
+@font-face{
+    font-family:'playfairDisplay'; 
+    font-style: normal;
+    src:url('../font/PlayfairDisplay-Bold.ttf');
+}
 
+
+*{
+    font-family: 'Poppins', 'Nanum Square';
+}
+a{
+    text-decoration: none;
+}
+.viewbutton{
+    padding: 15px 50px; box-sizing: border-box; 
+    border: 1px solid; font-size: 20px; display: block; max-width: 197px; 
+    font-family:'playfairDisplay'; font-weight: 900;
+}
 
 @media screen and (min-width: 768px) and (max-width: 1479px){
     header>div,
@@ -164,8 +199,9 @@
 @media screen and (min-width: 1480px){
     header>div,
     footer div,
-    section.bestSeller>div{
-        max-width: 1480px; margin: 0 auto;
+    section.bestSeller>div,
+    section.introduce{
+        max-width: 1480px; margin: 0 auto 200px;
     }
 
     
@@ -174,7 +210,7 @@
         width: 100%; height: 100px; 
         position: fixed; 
         background-color: #ffffff; 
-        z-index: 100; border-bottom: 1px solid rgb(73, 73, 73, 0.3 );
+        z-index: 100; 
     }
     header>div h1 a{
         line-height: 100px; display: block; max-width: 200px;
@@ -197,11 +233,10 @@
     header>div nav>ul{
         float: left;
     }
-    header>div nav::after{
-        content: ''; display: block; clear: both; visibility: hidden;
-    }
+    
     header>div nav ul>li>a{
-        line-height: 100px; display: block;
+        line-height: 100px; display: block; color: #000000; 
+        font-weight: 500; 
     }
     header>div nav ul>*{
         float: left; 
@@ -218,28 +253,47 @@
     }
     header>div nav>ul>li:hover ol{
         /* display: block;  */ opacity: 1;
-        height: 350px;
+        height: 380px;
     }
     header>div nav ul li ol li{
         line-height: 35px; list-style: none; width: 20%; 
     }
+    header>div nav ul li ol li>a{
+        color: #000000; font-size: 18px;
+    }
     header>div nav ul li ol li:nth-child(1){
         font-size: 25px; font-weight: 700; line-height: 60px;
     }
-    header>div nav ul li ol::after{
+    header>div nav ul li ol li>a:hover{
+        color: #5e2e0c; 
+    }
+    header>div nav ul li ol li>a:hover:before{
+        content: '>'; display: inline-block;
+    }
+    /* header>div nav ul li ol::after{
         content: ''; 
-    }
+    } */
     header>div nav>div{
-        float: right;
+        float: right; height: 100px;
     }
-    header>div nav>div a{
-        line-height: 100px; display: inline-block;  
+    header>div nav::after{
+        content: ''; display: block; clear: both; visibility: hidden;
     }
-    header>div nav>div a:not(:first-of-type){
-        padding-left: 30px;
+    header>div nav>div>a{
+        padding: 40px 15px; display: inline-block; color: #000000; 
+        font-weight: 500; opacity: 0.4; box-sizing: border-box; height: 100px;
     }
-    /* header>div nav>div a:not(:last-of-type)::after{
-        content: '|'; display: block; line-height: 0;
+    header>div nav ul>li>a:hover{
+        color: #feb900;
+    }
+    header>div nav>div a:hover{
+        opacity: 1;
+    }
+    header>div nav>div a img{
+        width: 100%; max-width: 18px; line-height: 0; display: inline-block; vertical-align: bottom;
+    }
+    /* header>div nav>div a:not(:first-of-type):before{
+        content: '|'; display: inline-block; padding-right: 30px;
     } */
     header>div nav ul::after{
         content: ''; display: block; clear: both; visibility: hidden;
