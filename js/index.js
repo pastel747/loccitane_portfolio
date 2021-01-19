@@ -142,14 +142,27 @@ function test1(){
 
 
 function test2(){
-
   $('label.mcheck').click(function(){
     $(this).toggleClass('labelActive');
   });
 }
 
+
+// console.log(windowTop);
 function headeropacity(){
+  var windowTop = $(window).scrollTop();
+  var windowAfterTop;
+  // console.log(test);
+
   $(window).scroll(function(){
-    var test = $('')
+    windowAfterTop = $(window).scrollTop();
+    if( windowTop >= windowAfterTop ){
+      $('header').addClass('headerActive');
+    }else{
+      $('header').removeClass('headerActive');
+    }
+
+    windowTop = windowAfterTop;
   });
+  
 }

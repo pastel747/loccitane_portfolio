@@ -36,6 +36,7 @@ a{
     font-family:'playfairDisplay'; font-weight: 900;
 }
 
+
 @media screen and (min-width: 768px) and (max-width: 1479px){
     header>div,
     footer div,
@@ -208,9 +209,20 @@ a{
 
     header{
         width: 100%; height: 100px; 
-        position: fixed; 
-        background-color: #ffffff; 
+        position: fixed; transition: 0.4s ease-in-out;
+        background-color: rgba(255, 255, 255, 0.7);
         z-index: 100; 
+    }
+    header:hover{
+        width: 100%; height: 100px; 
+        position: fixed; transition: 0.4s ease-in-out;
+        background-color: rgba(255, 255, 255, 1);
+        z-index: 100; 
+    }
+    
+    header.headerActive{
+        transition: 0.4s ease-in-out;
+        background-color: rgba(255, 255, 255, 1);
     }
     header>div h1 a{
         line-height: 100px; display: block; max-width: 200px;
