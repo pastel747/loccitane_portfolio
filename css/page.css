@@ -107,6 +107,12 @@ body{
         text-align: center;
         width: 33.33%; line-height: 80px; float: left; list-style: none;
     }
+    .bestSeller>div ul li>a{
+      color: #aaaaaa;
+    }
+    .bestSeller>div ul li.categoryActive>a{
+      border-bottom: 2px solid; padding-bottom: 10px; box-sizing: border-box; color: #feb900;
+    }
     .bestSeller>div ul::after{
         content: ''; display: block; clear: both; visibility: hidden;
     }

@@ -72,10 +72,12 @@ function bestSellerClick(){
     });
     $('.bestSeller>div>ul>li').click(function(){
         // alert('클릭');
+        $('.bestSeller>div>ul>li').removeClass('categoryActive');
         $('.bestSeller>div>ol>li').removeClass('slide_active');
         // $('.bestSeller>div>ol>li').css('display', 'none');
         var testIndex = $(this).index();
         // alert(testIndex);
+        $(this).addClass('categoryActive')
         $('.bestSeller>div>ol>li').eq(testIndex).addClass('slide_active');
         // alert('test');
         // $('.bestSeller>div>ol>li[testIndex]').css('display', 'block');
@@ -148,11 +150,9 @@ function test2(){
 }
 
 
-// console.log(windowTop);
 function headeropacity(){
   var windowTop = $(window).scrollTop();
   var windowAfterTop;
-  // console.log(test);
 
   $(window).scroll(function(){
     windowAfterTop = $(window).scrollTop();
