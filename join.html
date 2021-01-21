@@ -124,6 +124,121 @@
         </div>
     </header>
 
+    <section>
+        <h2>회원가입</h2>
+        <div>
+            <form action="#">
+                <div>
+                    <div>
+                        <h3>
+                            <label for="pUserID">아이디</label>
+                            <span>*</span>
+                        </h3>
+                        <span>
+                            <input type="text" value name="pUserID" id="pUserID" title="아이디 입력">
+                            <span>	
+                                (영문소문자/숫자, 4~16자)
+                            </span>
+                        </span>
+                        <span></span>
+                    </div>
+                    <div>
+                        <h3>
+                            <label for="pUserPW">비밀번호</label>
+                            <span>*</span>
+                        </h3>
+                        <span>
+                            <input type="text" value name="pUserPW" id="pUserPW" title="비밀번호 입력">
+                            <span>	
+                                (영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)
+                            </span>
+                        </span>
+                        <span></span>
+
+                        <h3>
+                            <label for="pUserPWC">비밀번호 확인</label>
+                            <span>*</span>
+                        </h3>
+                        <span>
+                            <input type="text" value name="pUserPWC" id="pUserPWC" title="비밀번호 확인">
+                            <!-- <span></span> -->
+                        </span>
+                        <span></span>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h3>
+                            <label for="pUserN">이름</label>
+                            <span>*</span>
+                        </h3>
+                        <span>
+                            <input type="text" value name="pUserN" id="pUserN" title="이름 입력">
+                            <!-- <span></span> -->
+                        </span>
+                        <span></span>
+                    </div>
+                    <div>
+                        <h3>
+                            <label for="pUserBirth">생년월일</label>
+                        </h3>
+                        <div>
+                            <span>
+                                <input type="text" id="birth_yy" placeholder="년(4자리)">
+                            </span>
+                            <span>
+                                <select name="birthMonth" id="mm">
+                                    <option value>월</option>
+                                    <option value="01">1</option>
+                                    <option value="02">2</option>
+                                    <option value="03">3</option>
+                                    <option value="04">4</option>
+                                    <option value="05">5</option>
+                                    <option value="06">6</option>
+                                    <option value="07">7</option>
+                                    <option value="08">8</option>
+                                    <option value="09">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </span>
+                            <span>
+                                <input type="text" id="birth_dd" placeholder="일">
+                            </span>
+                        </div>
+                        <span></span>
+                    </div>
+                    <div>
+                        <h3>
+                            <label for="pUserGender">성별</label>
+                        </h3>
+                        <div>
+                            <select name="pUserGender" id="pUserGender"></select>
+                        </div>
+                        <span></span>
+                    </div>
+                    <div>
+                        <h3>
+                            <label for="pUserEmail">이메일</label>
+                            <span>*</span>
+                        </h3>
+                        <div>
+                            <span>
+                                <input type="text" id="pUserEmail" name="pUserEmail" placeholder="선택 입력">
+                            </span>
+                        </div>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div>
+                    <input type="submit">
+                </div>
+            </form>
+        </div>
+    </section>
+
     <footer>
         <div>
             <h2>
