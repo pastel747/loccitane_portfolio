@@ -1,4 +1,25 @@
-section{
-    background-color: seashell;
-    padding-top: 100px; box-sizing: border-box;
+
+
+
+@media screen and (min-width: 1480px){
+
+    .joinArea{
+        background-color: seashell; padding: 200px 20% 100px; margin: 0 auto; box-sizing: border-box;
+    }
+    .joinArea h2{
+        font-size: 30px; margin-bottom: 50px;
+    }
+    .joinForm>div>h3{
+        margin-bottom: 15px; font-size: 20px;
+    }
+    .joinForm>div>span:first-of-type{
+        margin-bottom: 40px; display: block;
+    }
+    .joinForm>div{
+        margin-bottom: 40px;
+    }
+    .joinForm>div>span:first-of-type>input{
+        width: 40%; border: 1px solid #aaaaaa; border-radius: 5px; 
+    }
+
 }
