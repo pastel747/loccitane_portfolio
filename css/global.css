@@ -200,12 +200,16 @@ a{
 @media screen and (min-width: 1480px){
     header>div,
     footer div,
-    section.bestSeller>div,
-    section.introduce{
+    .bestSeller>div,
+    .introduce{
         max-width: 1480px; margin: 0 auto;
     }
 
-    
+    .loccitane_banner,
+    .bestSeller,
+    .introduce{
+        margin: 0 auto 200px;
+    }
 
     header{
         width: 100%; height: 100px; 
