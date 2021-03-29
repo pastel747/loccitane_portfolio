@@ -66,7 +66,7 @@ function swiperSetting(){
 
 
 function bestSellerClick(){
-    $('.bestSeller>div>ul>li a').click(function(e){
+    $('.bestSeller>div>ul>li>a').click(function(e){
         // console.log(e);
         e.preventDefault();
     });
