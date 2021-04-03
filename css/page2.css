@@ -113,7 +113,10 @@
         transform: translateY(0px);
     }
     span.PD_cart{
-        width: 70%; padding: 0 23%;
+        width: 70%; padding: 0 23%; 
+    }
+    span.PD_cart:hover{
+        background: #feb900; transition: 0.3s; 
     }
     span.PD_heart{
         width: 27%; margin-left: 10px; padding: 0 10%;

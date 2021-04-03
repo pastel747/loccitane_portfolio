@@ -7,6 +7,7 @@ $(document).ready(function(){
     bestSellerClick();
     test2();
     headeropacity();
+    price();
 });
 
 function swiperSetting2(){
@@ -166,3 +167,5 @@ function headeropacity(){
   });
   
 }
+
+

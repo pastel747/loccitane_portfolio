@@ -5,7 +5,8 @@ $(document).ready(function(){
     // priceTest();
     // priceTest2();
     priceTest3();
-
+    price();
+    // test();
 
 
     $('ul.PD_align li a').click(function(e){
@@ -73,7 +74,6 @@ function priceTest(){
         if( $('.product_face ol li').attr('data-price') == b ){
             $(this).css({background : red});
         }
-       
     });
 }
 
@@ -206,7 +206,93 @@ function priceTest3(){
 
 
 
+// function price(){
+//     var priceObject = '';
 
+//     var down1 = '';
+//     var up1 = '';
+//     var total1 = '';
+
+//     var down2 = '';
+//     var up2 = '';
+//     var total2 = '';
+
+
+//     $('.pd_price').each(function(){
+//         priceObject = $(this).html();
+//         var priceLength = $(this).html().length;
+
+        
+//         if( priceObject.length>3||priceObject.length<=5 ){
+//             down1 = priceObject.substr(2, 3);
+//             up1 = priceObject.substr(0, 2);
+//             total1 = up1 +','+ down1;
+
+//             $(this).html(total1);
+
+//         }else if( priceObject.length == 6 ){
+//             down2 = priceObject.substr(3, 3);
+//             up2 = priceObject.substr(0, 3);
+//             total2 = up2 +','+ down2;
+            
+//             $(this).html(total2);
+//         }
+            
+//     });
+// }
+
+
+function price(){
+    // 상품 가격에 ','을 붙이는 작업 
+    var priceObject = '';
+
+    var down1 = '';
+    var up1 = '';
+    var total1 = '';
+
+
+
+    $('.pd_price').each(function(){
+        priceObject = $(this).html();
+        var priceLength = priceObject.length;
+        // var priceLength = $(this).html().length;
+
+        
+        if( priceLength == 4){
+            down1 = priceObject.substr(1);
+            up1 = priceObject.substring(0, 1);
+            total1 = up1 +','+ down1;
+            $(this).html(total1);
+
+        }else if( priceObject.length == 5 ){
+            down1 = priceObject.substr(2, 3);
+            up1 = priceObject.substr(0, 2);
+            total1 = up1 +','+ down1;
+            $(this).html(total1);
+
+        }else if( priceObject.length == 6 ){
+            down1 = priceObject.substr(3, 3);
+            up1 = priceObject.substr(0, 3);
+            total1 = up1 +','+ down1;
+            $(this).html(total1);
+        }
+    });
+}
+
+
+
+
+
+
+
+// function test(){
+//     $('.pd_price').each(function(){
+//         var priceObject = $(this).html();
+//         $(this).digits(priceObject);
+
+//     });
+    
+// }
 
 
 
