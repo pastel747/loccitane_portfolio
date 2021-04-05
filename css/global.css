@@ -354,13 +354,17 @@ a{
         line-height: 60px; 
     }
     footer div ol li a{
-        display: block;
+        display: block; color: #000000;
     }
     footer div ol li:not(:first-of-type){
         margin-left: 200px;
     }
+    footer div ol li p,
+    footer div ol li a{
+        line-height: 25px;
+    }
     footer div>span{
-        width: 100%; background-color: #ffffff; opacity: 0.3;
+        width: 100%; background-color: #000000; opacity: 0.3;
         height: 1px; display: block; float: left;
     }
 }

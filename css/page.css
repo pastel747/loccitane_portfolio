@@ -3,10 +3,7 @@ body{
     position: relative;height: 100%;
 }
 
-    
 
-
-    
 @media screen and (min-width: 768px) and (max-width: 1479px){
       section.swiperArea{
         padding-top: 100px; margin-bottom: 100px; height: 100%;
@@ -89,44 +86,51 @@ body{
     /* 타블렛 끝 */
 
 @media screen and (min-width: 1480px){
-  section.swiperArea{
-    padding-top: 100px; box-sizing: border-box; margin-bottom: 100px;
-  }
-  section.swiperArea .swiper-container{
-    max-height: 550px;
-  }
-  section.swiperArea .swiper-container .swiper-wrapper .swiper-slide{
-    min-height: 550px;
-  }
-  section.swiperArea .swiper-container .swiper-wrapper .swiper-slide img{
-    width: 100%;
-} 
-    /* section.swiperArea{
-        padding-top: 100px; height: 100%;
-        margin-bottom: 100px;
+    section.swiperArea{
+      padding-top: 100px; box-sizing: border-box; margin-bottom: 100px;
     }
-    section.swiperArea {
-      max-height: 500px;
+    section.swiperArea .swiper-container{
+      max-height: 550px;
+    }
+    .mainSwiperItem{
+      min-height: 550px; position: relative;
+    }
+    .mainSwiperItem::after{
+      content: ''; display: block; background-color: rgba(0, 0, 0, 0.05);
+      position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+    }
+    .mainSwiperItem img{
+      width: 100%;
+    } 
+    .mainSwiperItem div{
+      position: absolute;  left: 10%; top: 45%; width: 40%;
+    }
+    .mainSwiperItem div>*{
+      float: left; color: #ffffff;
+    }
+    .mainSwiperItem div::after{
+      content: ''; display: block; clear: both; visibility: hidden;
+    }
+    .mainSwiperItem div strong{
+      font-size: 45px; line-height: 60px; margin-bottom: 15px;
+      font-family: 'playfairDisplay';
+    }
+    .mainSwiperItem div p{
+      font-size: 23px;
     }
     
-    section.swiperArea .swiper-container .swiper-wrapper .swiper-slide{
-      min-height: 473px:
-    }
-    section.swiperArea .swiper-container .swiper-wrapper .swiper-slide img{
-        width: 100%; 
-    } */
     
 
 
     .bestSeller>div h2{
-        margin-bottom: 60px; text-align: center;
+      margin-bottom: 60px; text-align: center;
     }
     .bestSeller>div ul{
-        width: 50%; margin: 0 auto; 
+      width: 50%; margin: 0 auto; 
     }
     .bestSeller>div ul li{
-        text-align: center;
-        width: 33.33%; line-height: 80px; float: left; list-style: none;
+      text-align: center;
+      width: 33.33%; line-height: 80px; float: left; list-style: none;
     }
     .bestSeller>div ul li>a{
       color: #aaaaaa;
@@ -135,102 +139,85 @@ body{
       border-bottom: 2px solid; padding-bottom: 10px; box-sizing: border-box; color: #feb900;
     }
     .bestSeller>div ul::after{
-        content: ''; display: block; clear: both; visibility: hidden;
+      content: ''; display: block; clear: both; visibility: hidden;
     }
     .bestSeller>div ol li{
-        list-style: none; display: none;
+      list-style: none; display: none;
     }
     .bestSeller>div ol li.slide_active{
-        display: block;
+      display: block;
     }
     li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide{
-        display: flex; 
-        /* flex-wrap: wrap;  */
-        /* align-content: center; */
-        justify-self: center;
-        flex-direction: column;
-        border-bottom: 0.1px solid rgba(70, 70, 70, 0.3); box-sizing: border-box;
+      display: flex; 
+      /* flex-wrap: wrap;  */
+      /* align-content: center; */
+      justify-self: center;
+      flex-direction: column;
+      border-bottom: 0.1px solid rgba(70, 70, 70, 0.3); box-sizing: border-box;
     }
     li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide:hover{
-        border-bottom: 0.1px solid rgba(70, 70, 70, 1); 
+      border-bottom: 0.1px solid rgba(70, 70, 70, 1); 
     }
       
     li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide img{
-        opacity: 1;
-        width: 100%; max-width: 300px; margin-bottom: 30px; transition: transform 0.2s;
+      opacity: 1;
+      width: 100%; max-width: 300px; margin-bottom: 30px; transition: transform 0.2s;
     }
     li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide img:hover{
-        transform: scale(1.1); opacity: 0.5; 
+      transform: scale(1.1); opacity: 0.5; 
     }
     li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide:hover dl dt{
-        font-weight: 600; color: rgba(90, 41, 8, 0.8s);
+      font-weight: 600; color: rgba(90, 41, 8, 0.8s);
     }
     .swiper-slide dl>*{
-        margin-bottom: 15px;
+      margin-bottom: 15px;
     }
     dl dt{
-        width: 300px;
+      width: 300px;
     }
     .name .swiper-total .swiper-container .swiper-wrapper .swiper-slide,
     .swiper-slide dl{
-        margin-bottom: 50px;
+      margin-bottom: 50px;
     }
-
-    /* .loccitane_banner{
-      width: 90%;
-    } */
+    .loccitane_banner{
+      background: url('../images/main_banner.jpg') no-repeat center;
+      background-size: cover; position: relative; width: 100%; height: 500px;
+    }
     .loccitane_banner h2{
       display: none;
     }
-    .loccitane_banner::after{
-      content: ''; display: block; clear: both; visibility: hidden;
+    .loccitane_banner::before{
+      background-color: rgba(0, 0, 0, 0.1);
+      content: ''; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%;
     }
     .loccitane_banner div{
-      position: relative;
-      width: 50%; height: 250px; float: left; padding: 4% 5%; box-sizing: border-box;
-    }
-    .loccitane_banner div:hover:before{
-      background-color: rgba(255, 255, 255, 0);
-      
-    }
-    .loccitane_banner div::before{
-      background-color: rgba(255, 255, 255, 0.3);
-      content: ''; display: block;  transition: 0.2s;
-      position: absolute; left: 0; top: 0; width: 100%; height: 100%;
-    }
-    .loccitane_banner div:nth-of-type(1){
-      background: url('../images/main_banner_left.jpg') no-repeat center;
-      background-size: cover; 
-    }
-    .loccitane_banner div:nth-of-type(2){
-      background: url('../images/main_banner_right.jpg') no-repeat center;
-      background-size: cover;
+      position: relative; height: 100%;
     }
     .loccitane_banner div>*{
-      position: relative;
+      position: absolute; right: 20%;
+      text-align: right; color: #ffffff; display: block;
+    }
+    .loccitane_banner div strong{
+      font-size: 30px; top: 35%; 
     }
     .loccitane_banner div p{
-      margin: 0 auto 30px; text-align: center; font-size: 30px; font-family: 'playfairDisplay';
+      font-size: 22px; top: 45%;
     }
-    .loccitane_banner div span.viewbutton{
-      margin: 0 auto; 
+    .loccitane_banner div .pd_price{
+      top: 52%;
+    }
+    .loccitane_banner div .viewbutton{
+      top: 0; top: 62%;
     }
 
+
+    
     .introduce{
       height: 500px;
     }
     .introduce::after{
       content: ''; display: block; clear: both; visibility: hidden;
     }
-    /* .introduce h2{
-      height: 500px; width: 60%; padding-left: ;
-      float: left; position: relative;
-    }
-    .introduce h2::before{
-      content: ''; display: block; height: 500px; width: 100%; position: absolute; left: 0; top: 0;
-      background: url('../images/main_introduce.jpg') no-repeat center;
-      background-size: cover;
-    } */
     .introduce img{
       width: 100%; max-width: 700px; float: left; margin-right: 50px;
     }
@@ -239,19 +226,12 @@ body{
       line-height: 80px; margin-bottom: 50px;
       font-size: 45px;
     }
-    /* .introduce h2::before{
-      content: ''; display: block; height: 500px; width: 60%; position: absolute; left: 0; top: 0;
-      background: url('../images/main_introduce.jpg') no-repeat center;
-      background-size: cover;
-    } */
     .introduce p{
       width: 48%; float: left; line-height: 40px; font-size: 20px; margin-bottom: 50px;
     }
     .introduce .viewbutton{
       float: left; 
     }
-
-
     .ad_banner{
       height: 350px; width: 100%;
       background: url('../images/main_adbanner.jpg') no-repeat center;
@@ -263,19 +243,14 @@ body{
     .ad_banner .mainAD_product{
       top: 30%; font-size: 25px; margin-bottom: 15px;
     }
-    .ad_banner .mainAD_price{
-      top: 40%; font-size: 23px; 
+    .ad_banner .pd_price{
+      top: 40%; font-size: 22px; 
     }
     .ad_banner .viewbutton{
-      top: 60%;
+      top: 55%;
     }
 
-    
-    
 }
-
-
-    
 
 
 

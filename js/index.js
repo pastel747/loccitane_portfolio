@@ -168,4 +168,40 @@ function headeropacity(){
   
 }
 
+function price(){
+  // 상품 가격에 ','을 붙이는 작업 
+  var priceObject = '';
+
+  var down1 = '';
+  var up1 = '';
+  var total1 = '';
+
+
+
+  $('.pd_price').each(function(){
+      priceObject = $(this).html();
+      var priceLength = priceObject.length;
+      // var priceLength = $(this).html().length;
+      
+      if( priceLength == 4){
+          down1 = priceObject.substr(1);
+          up1 = priceObject.substring(0, 1);
+          total1 = up1 +','+ down1 + '원';
+          $(this).html(total1);
+
+      }else if( priceObject.length == 5 ){
+          down1 = priceObject.substr(2, 3);
+          up1 = priceObject.substr(0, 2);
+          total1 = up1 +','+ down1 + '원';
+          $(this).html(total1);
+
+      }else if( priceObject.length == 6 ){
+          down1 = priceObject.substr(3, 3);
+          up1 = priceObject.substr(0, 3);
+          total1 = up1 +','+ down1 + '원';
+          $(this).html(total1);
+      }
+  });
+}
+
 
