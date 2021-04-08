@@ -34,7 +34,7 @@
         width: 40%; border: 1px solid #aaaaaa; border-radius: 3px; background-color: #ffd152;
         font-size: 30px; line-height: 60px; color: #000000;
     }
-    .joinForm>div>span>.userAdressSearch{
+    .joinForm>.userAddress>span>.userAddressSearch{
         background-color: #d4d4d4; width: 10%; border: 1px solid #aaaaaa; border-radius: 3px; height: 40px;
         padding: 0 1%;
     }

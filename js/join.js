@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
     idCheck();
-    zipSearch();
+    addressSearch();
 });
 
 function idCheck(){
@@ -11,6 +11,6 @@ function idCheck(){
     
 }
 
-function adressSearch(){
+function addressSearch(){
 
 }

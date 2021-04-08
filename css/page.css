@@ -1,254 +1,313 @@
 html,
 body{
-    position: relative;height: 100%;
+  position: relative;height: 100%;
 }
 
 
-@media screen and (min-width: 768px) and (max-width: 1479px){
-      section.swiperArea{
-        padding-top: 100px; margin-bottom: 100px; height: 100%;
-      }
-      section.swiperArea .swiper-container .swiper-wrapper .swiper-slide img{
-        width: 100%;
-      }
+@media screen and (min-width: 768px) and (max-width: 1199px){
+  section.swiperArea{
+    padding-top: 100px; box-sizing: border-box; margin-bottom: 100px;
+  }
+  section.swiperArea .swiper-container{
+    max-height: 550px;
+  }
+  .mainSwiperItem{
+    width: 100%; 
+  }
+  .mainSwiperItem::after{
+    content: ''; display: block; background-color: rgba(70, 70, 70, 0.1);
+    position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+  }
+  .mainSwiperItem img{
+    width: 100%;
+  } 
+  .mainSwiperItem div{
+    padding: 0 3%; box-sizing: border-box; 
+    z-index: 1; position: absolute; left: 10%; top: 40%; 
+    float: left; text-align: left; 
+  }
+  .mainSwiperItem div>*{
+    color: #ffffff; 
+  }
+  .mainSwiperItem div::after{
+    content: ''; display: block; clear: both; visibility: hidden;
+  }
+  .mainSwiperItem div strong{
+    font-size: 45px; line-height: 80px; margin-bottom: 20px;
+    font-family: 'playfairDisplay';
+  }
+  .mainSwiperItem div p{
+    font-size: 23px;
+  }
+  
 
 
-      .bestSeller>div h2{
-        margin-bottom: 60px; text-align: center;
-      }
-      .bestSeller>div ul{
-        width: 50%; margin: 0 auto; 
-      }
-      .bestSeller>div ul li{
-        text-align: center;
-        width: 33.33%; line-height: 80px; float: left; list-style: none;
-      }
-      .bestSeller>div ul::after{
-        content: ''; display: block; clear: both; visibility: hidden;
-      }
-      .bestSeller>div ol li{
-        list-style: none; display: none;
-      }
-      .bestSeller>div ol li.slide_active{
-        display: block;
-      }
-      li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide{
-        display: flex; 
-        /* flex-wrap: wrap;  */
-        /* align-content: center; */
-        justify-self: center;
-        flex-direction: column;
-        border-bottom: 0.1px solid rgba(70, 70, 70, 0.3); box-sizing: border-box;
-      }
-      li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide:hover{
-        border-bottom: 0.1px solid rgba(70, 70, 70, 1); 
-      }
-      
-      li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide img{
-        opacity: 1;
-        width: 100%; max-width: 300px; margin-bottom: 30px; transition: transform 0.2s;
-      }
-      li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide img:hover{
-        transform: scale(1.1); opacity: 0.5; 
-      }
-      li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide:hover dl dt{
-        font-weight: 600; color: rgba(90, 41, 8, 0.8s);
-      }
-      .swiper-slide dl>*{
-        margin-bottom: 15px;
-      }
-      dl dt{
-        width: 300px;
-      }
-      .name .swiper-total .swiper-container .swiper-wrapper .swiper-slide,
-      .swiper-slide dl{
-        margin-bottom: 50px;
-      }
+  .bestSeller>div h2{
+    margin-bottom: 60px; text-align: center;
+  }
+  .bestSeller>div ul{
+    width: 50%; margin: 0 auto; 
+  }
+  .bestSeller>div ul li{
+    text-align: center;
+    width: 33.33%; line-height: 80px; float: left; list-style: none;
+  }
+  .bestSeller>div ul::after{
+    content: ''; display: block; clear: both; visibility: hidden;
+  }
+  .bestSeller>div ol li{
+    list-style: none; display: none;
+  }
+  .bestSeller>div ol li.slide_active{
+    display: block;
+  }
+  li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide{
+    display: flex; 
+    /* flex-wrap: wrap;  */
+    /* align-content: center; */
+    justify-self: center;
+    flex-direction: column;
+    border-bottom: 0.1px solid rgba(70, 70, 70, 0.3); box-sizing: border-box;
+  }
+  li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide:hover{
+    border-bottom: 0.1px solid rgba(70, 70, 70, 1); 
+  }
+  
+  li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide img{
+    opacity: 1;
+    width: 100%; max-width: 300px; margin-bottom: 30px; transition: transform 0.2s;
+  }
+  li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide img:hover{
+    transform: scale(1.1); opacity: 0.5; 
+  }
+  li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide:hover dl dt{
+    font-weight: 600; color: rgba(90, 41, 8, 0.8s);
+  }
+  .swiper-slide dl>*{
+    margin-bottom: 15px;
+  }
+  dl dt{
+    width: 300px;
+  }
+  .name .swiper-total .swiper-container .swiper-wrapper .swiper-slide,
+  .swiper-slide dl{
+    margin-bottom: 50px;
+  }
+  
+  
+  
 
-    .loccitane_banner{
-      width: 100%; height: 300px; margin-bottom: 1000px;
-    }
-    .loccitane_banner::after{
-      content: ''; display: block; clear: both; visibility: hidden;
-    }
-    .loccitane_banner div{
-      width: 50%; height: 300px; float: left;
-    }
-    .loccitane_banner div:nth-of-type(1){
-      background-color: red;
-    }
-    .loccitane_banner div:nth-of-type(2){
-      background-color: royalblue;
-    }
+  .loccitane_banner{
+    height: 500px; width: 100%; padding: 150px 10%; box-sizing: border-box;
+    background: url('../images/main_banner.jpg') no-repeat center;
+    background-size: cover; position: relative;
+  }
+  .loccitane_banner::before{
+    background-color: rgba(0, 0, 0, 0.1);
+    content: ''; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+  }
+  .loccitane_banner h2{
+    display: none;
+  }
+  .loccitane_banner div::after{
+    content: ''; display: block; clear: both; visibility: hidden;
+  }
+  .loccitane_banner div{
+    position: relative;
+  }
+  .loccitane_banner div p{
+    font-size: 22px; top: 45%; margin-bottom: 15px; 
+  }
+  .loccitane_banner div *{
+    color: #ffffff; text-align: right;
+  }
+  .loccitane_banner div .mainAD_product{
+    display: block; font-size: 30px; margin-bottom: 15px; 
+  }
+  .loccitane_banner div .pd_price{
+    font-size: 25px; 
+  }
+  .loccitane_banner div .viewbutton{
+    float: right;
+  }
+
     
-    
+  .introduce{
+    height: 500px; width: 80%;
+  }
+  .introduce::after{
+    content: ''; display: block; clear: both; visibility: hidden;
+  }
+  .introduce img{
+    width: 100%; max-width: 50%; float: left; margin-right: 30px;
+  }
+  .introduce h2{
+    display: inline-block;
+    line-height: 30px; margin-bottom: 40px;
+    font-size: 45px;
+  }
+  .introduce p{
+    width: 45%; float: left; line-height: 40px; font-size: 20px; margin-bottom: 50px;
+  }
+  .introduce .viewbutton{
+    float: left; 
+  }
+
+
 }
     /* 타블렛 끝 */
 
-@media screen and (min-width: 1480px){
-    section.swiperArea{
-      padding-top: 100px; box-sizing: border-box; margin-bottom: 100px;
-    }
-    section.swiperArea .swiper-container{
-      max-height: 550px;
-    }
-    .mainSwiperItem{
-      min-height: 550px; position: relative;
-    }
-    .mainSwiperItem::after{
-      content: ''; display: block; background-color: rgba(0, 0, 0, 0.05);
-      position: absolute; left: 0; top: 0; width: 100%; height: 100%;
-    }
-    .mainSwiperItem img{
-      width: 100%;
-    } 
-    .mainSwiperItem div{
-      position: absolute;  left: 10%; top: 45%; width: 40%;
-    }
-    .mainSwiperItem div>*{
-      float: left; color: #ffffff;
-    }
-    .mainSwiperItem div::after{
-      content: ''; display: block; clear: both; visibility: hidden;
-    }
-    .mainSwiperItem div strong{
-      font-size: 45px; line-height: 60px; margin-bottom: 15px;
-      font-family: 'playfairDisplay';
-    }
-    .mainSwiperItem div p{
-      font-size: 23px;
-    }
+@media screen and (min-width: 1200px){
+  .swiperArea{
+    padding-top: 100px; box-sizing: border-box; margin-bottom: 100px;
+  }
+  .swiperArea .swiper-container{
+    max-height: 550px;
+  }
+  .mainSwiperItem{
+    width: 100%; 
+  }
+  .mainSwiperItem::after{
+    content: ''; display: block; background-color: rgba(70, 70, 70, 0.1);
+    position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+  }
+  .mainSwiperItem img{
+    width: 100%;
+  } 
+  .mainSwiperItem div{
+    padding: 0 3%; box-sizing: border-box; 
+    z-index: 1; position: absolute; left: 10%; top: 40%; 
+    float: left; text-align: left;
+  }
+  .mainSwiperItem div>*{
+    color: #ffffff; 
+  }
+  .mainSwiperItem div::after{
+    content: ''; display: block; clear: both; visibility: hidden;
+  } 
+  .mainSwiperItem div strong{
+    font-size: 45px; line-height: 80px; margin-bottom: 20px;
+    font-family: 'playfairDisplay';
+  }
+  .mainSwiperItem div p{
+    font-size: 23px; 
+  }
+
+
+  .bestSeller>div h2{
+    margin-bottom: 60px; text-align: center;
+  }
+  .bestSeller>div ul{
+    width: 50%; margin: 0 auto; 
+  }
+  .bestSeller>div ul li{
+    text-align: center;
+    width: 33.33%; line-height: 80px; float: left; list-style: none;
+  }
+  .bestSeller>div ul li>a{
+    color: #aaaaaa;
+  }
+  .bestSeller>div ul li.categoryActive>a{
+    border-bottom: 2px solid; padding-bottom: 10px; box-sizing: border-box; color: #feb900;
+  }
+  .bestSeller>div ul::after{
+    content: ''; display: block; clear: both; visibility: hidden;
+  }
+  .bestSeller>div ol li{
+    list-style: none; display: none;
+  }
+  .bestSeller>div ol li.slide_active{
+    display: block;
+  }
+  li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide{
+    display: flex; 
+    /* flex-wrap: wrap;  */
+    /* align-content: center; */
+    justify-self: center;
+    flex-direction: column;
+    border-bottom: 0.1px solid rgba(70, 70, 70, 0.3); box-sizing: border-box;
+  }
+  li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide:hover{
+    border-bottom: 0.1px solid rgba(70, 70, 70, 1); 
+  }
     
-    
+  li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide img{
+    opacity: 1;
+    width: 100%; max-width: 300px; margin-bottom: 30px; transition: transform 0.2s;
+  }
+  li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide img:hover{
+    transform: scale(1.1); opacity: 0.5; 
+  }
+  li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide:hover dl dt{
+    font-weight: 600; color: rgba(90, 41, 8, 0.8s);
+  }
+  .swiper-slide dl>*{
+    margin-bottom: 15px;
+  }
+  dl dt{
+    width: 300px;
+  }
+  .name .swiper-total .swiper-container .swiper-wrapper .swiper-slide,
+  .swiper-slide dl{
+    margin-bottom: 50px;
+  }
 
-
-    .bestSeller>div h2{
-      margin-bottom: 60px; text-align: center;
-    }
-    .bestSeller>div ul{
-      width: 50%; margin: 0 auto; 
-    }
-    .bestSeller>div ul li{
-      text-align: center;
-      width: 33.33%; line-height: 80px; float: left; list-style: none;
-    }
-    .bestSeller>div ul li>a{
-      color: #aaaaaa;
-    }
-    .bestSeller>div ul li.categoryActive>a{
-      border-bottom: 2px solid; padding-bottom: 10px; box-sizing: border-box; color: #feb900;
-    }
-    .bestSeller>div ul::after{
-      content: ''; display: block; clear: both; visibility: hidden;
-    }
-    .bestSeller>div ol li{
-      list-style: none; display: none;
-    }
-    .bestSeller>div ol li.slide_active{
-      display: block;
-    }
-    li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide{
-      display: flex; 
-      /* flex-wrap: wrap;  */
-      /* align-content: center; */
-      justify-self: center;
-      flex-direction: column;
-      border-bottom: 0.1px solid rgba(70, 70, 70, 0.3); box-sizing: border-box;
-    }
-    li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide:hover{
-      border-bottom: 0.1px solid rgba(70, 70, 70, 1); 
-    }
-      
-    li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide img{
-      opacity: 1;
-      width: 100%; max-width: 300px; margin-bottom: 30px; transition: transform 0.2s;
-    }
-    li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide img:hover{
-      transform: scale(1.1); opacity: 0.5; 
-    }
-    li.name .swiper-total .swiper-container .swiper-wrapper .swiper-slide:hover dl dt{
-      font-weight: 600; color: rgba(90, 41, 8, 0.8s);
-    }
-    .swiper-slide dl>*{
-      margin-bottom: 15px;
-    }
-    dl dt{
-      width: 300px;
-    }
-    .name .swiper-total .swiper-container .swiper-wrapper .swiper-slide,
-    .swiper-slide dl{
-      margin-bottom: 50px;
-    }
-    .loccitane_banner{
-      background: url('../images/main_banner.jpg') no-repeat center;
-      background-size: cover; position: relative; width: 100%; height: 500px;
-    }
-    .loccitane_banner h2{
-      display: none;
-    }
-    .loccitane_banner::before{
-      background-color: rgba(0, 0, 0, 0.1);
-      content: ''; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%;
-    }
-    .loccitane_banner div{
-      position: relative; height: 100%;
-    }
-    .loccitane_banner div>*{
-      position: absolute; right: 20%;
-      text-align: right; color: #ffffff; display: block;
-    }
-    .loccitane_banner div strong{
-      font-size: 30px; top: 35%; 
-    }
-    .loccitane_banner div p{
-      font-size: 22px; top: 45%;
-    }
-    .loccitane_banner div .pd_price{
-      top: 52%;
-    }
-    .loccitane_banner div .viewbutton{
-      top: 0; top: 62%;
-    }
-
+  .loccitane_banner{
+    height: 500px; width: 100%; padding: 150px 10%; box-sizing: border-box;
+    background: url('../images/main_banner.jpg') no-repeat center;
+    background-size: cover; position: relative;
+  }
+  .loccitane_banner::before{
+    background-color: rgba(0, 0, 0, 0.1);
+    content: ''; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+  }
+  .loccitane_banner h2{
+    display: none;
+  }
+  .loccitane_banner div::after{
+    content: ''; display: block; clear: both; visibility: hidden;
+  }
+  .loccitane_banner div{
+    position: relative;
+  }
+  .loccitane_banner div p{
+    font-size: 22px; top: 45%; margin-bottom: 15px; 
+  }
+  .loccitane_banner div *{
+    color: #ffffff; text-align: right;
+  }
+  .loccitane_banner div .mainAD_product{
+    display: block; font-size: 30px; margin-bottom: 15px; 
+  }
+  .loccitane_banner div .pd_price{
+    font-size: 25px; 
+  }
+  .loccitane_banner div .viewbutton{
+    float: right;
+  }
 
     
-    .introduce{
-      height: 500px;
-    }
-    .introduce::after{
-      content: ''; display: block; clear: both; visibility: hidden;
-    }
-    .introduce img{
-      width: 100%; max-width: 700px; float: left; margin-right: 50px;
-    }
-    .introduce h2{
-      display: inline-block;
-      line-height: 80px; margin-bottom: 50px;
-      font-size: 45px;
-    }
-    .introduce p{
-      width: 48%; float: left; line-height: 40px; font-size: 20px; margin-bottom: 50px;
-    }
-    .introduce .viewbutton{
-      float: left; 
-    }
-    .ad_banner{
-      height: 350px; width: 100%;
-      background: url('../images/main_adbanner.jpg') no-repeat center;
-      background-size: cover; position: relative;
-    }
-    .ad_banner>*{
-      position: absolute; right: 20%; color: #ffffff; 
-    }
-    .ad_banner .mainAD_product{
-      top: 30%; font-size: 25px; margin-bottom: 15px;
-    }
-    .ad_banner .pd_price{
-      top: 40%; font-size: 22px; 
-    }
-    .ad_banner .viewbutton{
-      top: 55%;
-    }
+  .introduce{
+    height: 500px; width: 80%;
+  }
+  .introduce::after{
+    content: ''; display: block; clear: both; visibility: hidden;
+  }
+  .introduce img{
+    width: 100%; max-width: 50%; float: left; margin-right: 30px;
+  }
+  .introduce h2{
+    display: inline-block;
+    line-height: 30px; margin-bottom: 40px;
+    font-size: 45px;
+  }
+  .introduce p{
+    width: 45%; float: left; line-height: 40px; font-size: 20px; margin-bottom: 50px;
+  }
+  .introduce .viewbutton{
+    float: left; 
+  }
+  
 
 }
 
@@ -256,7 +315,6 @@ body{
 
 .swiperArea .swiper-container{
     width: 100%;
-    height: 650px;
 }
 
 .name .swiper-total .swiper-container{
