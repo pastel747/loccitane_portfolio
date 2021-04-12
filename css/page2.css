@@ -1,7 +1,7 @@
 
 
 
-@media screen and (min-width: 1480px){
+@media screen and (min-width: 1200px){
 
     .product_face{
         padding-top: 100px; margin: 0 auto; 
@@ -125,9 +125,6 @@
         width: 100%; max-width: 20px; vertical-align: middle;
     }
 
-    .soldout{
-        display: none;
-    }
+    
 }
-
 

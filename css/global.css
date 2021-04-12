@@ -36,6 +36,13 @@ a{
     font-family:'playfairDisplay'; font-weight: 900; margin: 0 auto;
 }
 
+.soldout{
+    display: none;
+}
+.logout{
+    display: none;
+}
+
 
 @media screen and (min-width: 360px) and (max-width: 1199px){
     header>div,
@@ -83,29 +90,33 @@ a{
     header>div h1{
         max-width: 150px; float: left;
     }
-    header>div nav{
-        width: 85%; float: right; 
+    /* header>div nav{
+        width: calc(100% - 150px);
+        float: right; 
     }
-    /*1 header>div nav>ul>li:first-of-type{
-        display: none;
-    } */
-
-
-    header>div nav>ul,
     header>div nav>div{
+        width: 90%;
+    } */
+    header>div nav>ul,
+    header>div nav>div a:not(:last-of-type){
         display: none;
     }
     header>div nav label{
-        display: block; width: 23px; 
+        display: inline-block; width: 25px; 
     }
-    header>div nav label>*{
-        width: 100%; height: 2px; display: block; background-color: rgb(0, 0, 0, 0.7);
+    header>div nav label span{
+        border-radius: 2px;
+        width: 100%; height: 4px; display: block; background-color: rgb(0, 0, 0, 0.3);
+    }
+    header>div nav label.hambActive span{
+        background-color: red;
+    }
+    header>div nav label:hover>*{
+        background-color: rgb(0, 0, 0, 1);
     }
     header>div nav label>span:not(:last-of-type){
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
-
-
     header>div nav>ul{
         float: left; 
     }
@@ -166,7 +177,10 @@ a{
         opacity: 1;
     }
     header>div nav>div a img{
-        width: 100%; max-width: 18px; line-height: 0; display: inline-block; vertical-align: bottom;
+        width: 100%; 
+        min-width: 27px; 
+        /* line-height: 0; */
+        vertical-align: bottom;
     }
     /* header>div nav>div a:not(:first-of-type):before{
         content: '|'; display: inline-block; padding-right: 30px;
@@ -352,7 +366,10 @@ a{
         opacity: 1;
     }
     header>div nav>div a img{
-        width: 100%; max-width: 18px; line-height: 0; display: inline-block; vertical-align: bottom;
+        width: 100%; 
+        max-width: 18px; 
+        /* line-height: 0;  */
+        /* vertical-align: bottom; */
     }
     /* header>div nav>div a:not(:first-of-type):before{
         content: '|'; display: inline-block; padding-right: 30px;

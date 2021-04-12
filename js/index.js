@@ -5,10 +5,17 @@ $(document).ready(function(){
     // swiperSetting3();
     // swiperSetting4();
     bestSellerClick();
-    test2();
     headeropacity();
     price();
+    headerham();
 });
+
+function headerham(){
+  var hamb = $('.mcheck');
+  hamb.click(function(){
+    $(this).toggleClass('hambActive');
+  });
+}
 
 function swiperSetting2(){
   var swiper2 = new Swiper('.name1', {
@@ -139,14 +146,6 @@ function test1(){
     if( $('.loccitane_banner').offset().top < $(window).scrollTop() ){
       $('.loccitane_banner').removeClass('active');
     }
-  });
-}
-
-
-
-function test2(){
-  $('label.mcheck').click(function(){
-    $(this).toggleClass('labelActive');
   });
 }
 
