@@ -7,13 +7,24 @@ $(document).ready(function(){
     bestSellerClick();
     headeropacity();
     price();
-    headerham();
+    headercategory();
+    hambmenuClick();
 });
 
-function headerham(){
-  var hamb = $('.mcheck');
-  hamb.click(function(){
+
+
+function headercategory(){
+  var category = $('header nav');
+  $('.mcheck').click(function(){
     $(this).toggleClass('hambActive');
+    $(category).toggleClass('menuActive');
+  });
+}
+
+function hambmenuClick(){
+  var incategory = $('li.incategory');
+  incategory.click(function(){
+    $(this).parent().toggleClass('categoryActive');
   });
 }
 
