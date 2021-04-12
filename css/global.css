@@ -186,7 +186,7 @@ a{
         content: ''; display: block; clear: both; visibility: hidden;
     }
     header>div nav>div>a{
-        position: absolute;
+        position: absolute; font-size: 1.3rem;
         padding: 40px 15px; display: inline-block; color: #000000; 
         font-weight: 500; opacity: 0.4; box-sizing: border-box; height: 100px;
     }
@@ -200,11 +200,11 @@ a{
         right: 10%;
     }
     header>div nav>div>a:first-child{
-        right: 70%;
+        left: 10%;
     }
     header>div nav>div>a:nth-child(2),
     header>div nav>div>a:nth-child(3){
-        right: 50%;
+        left: 40%; 
     }
     header>div nav>div>a.header_Shoppingbag img{
         max-width: 18px;
