@@ -30,7 +30,7 @@ function hambmenuClick(){
 
 function swiperSetting2(){
   var swiper2 = new Swiper('.name1', {
-      slidesPerView: 3,
+      slidesPerView: 1,
       navigation: {
           nextEl: '.bn1-1',
           prevEl: '.bn1-2',
@@ -39,6 +39,14 @@ function swiperSetting2(){
           el: '.pn1',
           clickable: true,
         },
+      breakpoints: {
+          600: {
+              slidesPerView: 2
+          },
+          1000: {
+            slidesPerView: 3
+          }
+        }
       });
 }
 
@@ -105,7 +113,7 @@ function bestSellerClick(){
 
         if(testIndex == 0){
           var swiper2 = new Swiper('.name1', {
-            slidesPerView: 3,
+            slidesPerView: 1,
             navigation: {
                 nextEl: '.bn1-1',
                 prevEl: '.bn1-2',
@@ -114,10 +122,18 @@ function bestSellerClick(){
                 el: '.pn1',
                 clickable: true,
               },
+            breakpoints: {
+              600: {
+                  slidesPerView: 2
+              },
+              1000: {
+                slidesPerView: 3
+              }
+            }
             });
         }else if(testIndex == 1){
           var swiper3 = new Swiper('.name2', {
-            slidesPerView: 3,
+            slidesPerView: 1,
             navigation: {
                 nextEl: '.bn2-1',
                 prevEl: '.bn2-2',
@@ -126,10 +142,18 @@ function bestSellerClick(){
                 el: '.pn2',
                 clickable: true,
               },
+            breakpoints: {
+              600: {
+                  slidesPerView: 2
+              },
+              1000: {
+                slidesPerView: 3
+              }
+            }
             });
         }else if(testIndex == 2){
           var swiper4 = new Swiper('.name3', {
-            slidesPerView: 3,
+            slidesPerView: 1,
             navigation: {
                 nextEl: '.bn3-1',
                 prevEl: '.bn3-2',
@@ -138,6 +162,14 @@ function bestSellerClick(){
                 el: '.pn3',
                 clickable: true,
               },
+            breakpoints: {
+              600: {
+                  slidesPerView: 2
+              },
+              1000: {
+                slidesPerView: 3
+              }
+            }
             });
         }
     });

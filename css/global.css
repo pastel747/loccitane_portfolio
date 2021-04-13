@@ -44,7 +44,7 @@ a{
 }
 
 
-@media screen and (min-width: 360px) and (max-width: 1199px){
+@media screen and (min-width: 360px) and (max-width: 900px){
     header>div,
     footer div,
     .bestSeller>div,
@@ -79,7 +79,7 @@ a{
         line-height: 100px; display: block; max-width: 200px;
     }
     header>div h1 a img{
-        width: 100%; background-size: contain;
+        width: 100%; background-size: contain; vertical-align: middle;
     }
     header>div{
         padding: 0 3%; box-sizing: border-box; position: relative; 
@@ -90,43 +90,51 @@ a{
     header>div h1{
         max-width: 150px; float: left;
     }
-    /* header>div nav{
-        width: calc(100% - 150px);
-        float: right; 
-    }
-    header>div nav>div{
-        width: 90%;
-    } */
     header>div nav{
-        position: absolute; right: 0; top: 100px; width: 80%; 
+        position: absolute; right: 0; top: 100px; width: 100%; 
     }
     header>div nav>ul,
     header>div nav>div a:not(:last-of-type){
         display: none;
     }
-    header>div nav.menuActive>ul,
+    header>div nav.menuActive>ul{
+        display: block;
+    }
     header>div nav.menuActive>div a:not(:last-of-type){
         display: block;
     }
-    header>div nav label{
-        display: inline-block; width: 25px; position: absolute; right: 3%; top: -60px;
+    header>div nav div label{
+        display: inline-block; width: 28px;
+        position: absolute; right: 5%; top: -60px;
+        /* padding: 0 15%; */
     }
-    header>div nav label span{
-        border-radius: 1.5px;
-        width: 100%; height: 3px; display: block; background-color: rgb(0, 0, 0, 0.3);
+    header>div nav div label span{
+        border-radius: 1.5px; transition: 0.5s transform;
+        width: 100%; height: 3px; display: block; background-color: rgba(0, 0, 0, 0.3);
     }
-    header>div nav label.hambActive span{
-        background-color: rgba(55, 55, 255, 0.3);
+    header>div nav div label.hambActive span{
+        transition: 0.5s transform;
     }
-    header>div nav label:hover>*{
+    /* header>div nav div label:hover>*{
         background-color: rgb(0, 0, 0, 1);
-    }
-    header>div nav label>span:not(:last-of-type){
+    } */
+    header>div nav div label>span:not(:last-of-type){
         margin-bottom: 5px;
     }
+    header>div nav.menuActive div label>span{
+        transform: translateY(8px) rotate(315deg);
+    }
+    header>div nav.menuActive div label>span:nth-child(3){
+        transform: translateY(-8px) rotate(-315deg);
+    }
+    header>div nav.menuActive div label>span:nth-child(2){
+        opacity: 0;
+    }
+    
+
     header>div nav>ul{
-        float: right; width: 100%; background-color: seashell; height: 100vh;
-        overflow: scroll; 
+        width: 100%; background-color: seashell; height: 100vh;
+        overflow: scroll; padding: 100px 0 200px; box-sizing: border-box;
     }
     header>div nav>ul>li{
         padding: 0 10%; box-sizing: border-box; margin: 20px 0;
@@ -149,7 +157,7 @@ a{
     }
     header>div nav ul li ol li{
         line-height: 35px; list-style: none; width: 100%; 
-        float: left; display: block; height: 100%;
+        float: left; display: block; height: 100%; 
     }
     header>div nav ul li ol li>a{
         color: #000000; font-size: 18px;
@@ -177,47 +185,264 @@ a{
     header>div nav ul::after{
         content: ''; display: block; clear: both; visibility: hidden;
     }
-
-
     header>div nav>div{
-        float: right; height: 100px;
-    }
-    header>div nav::after{
-        content: ''; display: block; clear: both; visibility: hidden;
+        padding: 0 10%; box-sizing: border-box; background-color: #ffffff;
+        border-top: 0.5px solid rgba(73, 73, 73, 0.3); 
+        width: 100%; display: flex; flex-direction: row;
+        justify-content: space-around; flex-wrap: wrap;
+        position: absolute; right: 0; top: 0;
     }
     header>div nav>div>a{
-        position: absolute; font-size: 1.3rem;
-        padding: 40px 15px; display: inline-block; color: #000000; 
-        font-weight: 500; opacity: 0.4; box-sizing: border-box; height: 100px;
+        font-size: 1.3rem; min-width: 80px; 
+        color: #000000; 
+        font-weight: 500; opacity: 0.4;  
+        text-align: center; line-height: 100px; 
+    }
+    
+    header>div nav>div>a.mypageImg{
+        border-left: 0.5px solid rgba(73, 73, 73, 0.3); 
+        border-right: 0.5px solid rgba(73, 73, 73, 0.3); 
+        box-sizing: border-box; width: 33.33%;
     }
     header>div nav>div>a.header_Search{
-        top: -102px; min-width: 55px; right: 10%;
+        position: absolute; right: 13%; top: -102px;
+        min-width: 58px; 
     }
-    header>div nav>div>a:not(.header_Search){
-        top: 70%;
-    }
-    header>div nav>div>a.header_Shoppingbag{
-        right: 10%;
-    }
-    header>div nav>div>a:first-child{
-        left: 10%;
-    }
-    header>div nav>div>a:nth-child(2),
-    header>div nav>div>a:nth-child(3){
-        left: 40%; 
-    }
-    header>div nav>div>a.header_Shoppingbag img{
-        max-width: 18px;
+    header>div nav>div>a.header_Search img{
+        width: 100%;
     }
     header>div nav>div a:hover{
         opacity: 1;
     }
     header>div nav>div a img{
-        width: 100%; 
-        /* min-width: 27px;  */
-        /* max-width: 22px; */
-        /* line-height: 0; */
-        vertical-align: bottom;
+        width: 100%; vertical-align: text-bottom;
+        max-width: 30px; 
+    }
+
+
+
+    footer{
+        background-color: rgb(73, 73, 73); 
+    }
+    footer div{
+        padding: 80px 3%; box-sizing: border-box;
+    }
+    footer div h2{
+        max-width: 150px; float: left;
+    }
+    footer div h2 a{
+        line-height: 50px; display: block;
+    }
+    footer div h2 a img{
+        width: 100%;
+    }
+    footer div ol{
+        list-style: none; float: right; width: 80%; 
+        padding-left: 10%; box-sizing: border-box; margin-bottom: 80px; 
+    }
+    
+    footer div::after{
+        content: ''; display: block; clear: both; visibility: hidden;
+    }
+    footer div ol li{
+        float: left;
+    }
+    footer div ol::after{
+        content: ''; display: block; clear: both; visibility: hidden;
+    }
+    footer div ol li h3{
+        line-height: 60px; 
+    }
+    footer div ol li a{
+        display: block; color: #000000;
+    }
+    footer div ol li:first-of-type{
+        padding-right: 10%; box-sizing: border-box; margin-bottom: 50px;
+    }
+    footer div ol li p,
+    footer div ol li a{
+        line-height: 25px;
+    }
+    footer div>span{
+        width: 100%; background-color: #000000; opacity: 0.3;
+        height: 1px; display: block; float: left;
+    }
+
+}
+
+@media screen and (min-width: 901px) and (max-width: 1199px){
+    header>div,
+    footer div,
+    .bestSeller>div,
+    .introduce,
+    .loccitane_banner div{
+        max-width: 1200px; margin: 0 auto;
+    }
+
+    .loccitane_banner,
+    .bestSeller,
+    .introduce{
+        margin: 0 auto 200px;
+    }
+
+    header{
+        width: 100%; height: 100px; 
+        position: fixed; transition: 0.4s ease-in-out;
+        background-color: rgba(255, 255, 255, 0.7);
+        z-index: 100; 
+    }
+    header:hover{
+        width: 100%; height: 100px; 
+        position: fixed; transition: 0.4s ease-in-out;
+        background-color: rgba(255, 255, 255, 1);
+        z-index: 100; 
+    }
+    header.headerActive{
+        transition: 0.4s ease-in-out;
+        background-color: rgba(255, 255, 255, 1);
+    }
+    header>div h1 a{
+        line-height: 100px; display: block; max-width: 200px;
+    }
+    header>div h1 a img{
+        width: 100%; background-size: contain; vertical-align: middle;
+    }
+    header>div{
+        padding: 0 3%; box-sizing: border-box; position: relative; 
+    }
+    header>div::after{
+        content: ''; display: block; visibility: hidden; clear: both;
+    }
+    header>div h1{
+        max-width: 150px; float: left;
+    }
+    header>div nav{
+        position: absolute; right: 0; top: 100px; width: 100%; 
+    }
+    header>div nav>ul,
+    header>div nav>div a:not(:last-of-type){
+        display: none;
+    }
+    header>div nav.menuActive>ul{
+        display: block;
+    }
+    header>div nav.menuActive>div a:not(:last-of-type){
+        display: block;
+    }
+    header>div nav div label{
+        display: inline-block; width: 28px;
+        position: absolute; right: 5%; top: -60px;
+        /* padding: 0 15%; */
+    }
+    header>div nav div label span{
+        border-radius: 1.5px; transition: 0.5s transform;
+        width: 100%; height: 3px; display: block; background-color: rgba(0, 0, 0, 0.3);
+    }
+    header>div nav div label.hambActive span{
+        transition: 0.5s transform;
+    }
+    /* header>div nav div label:hover>*{
+        background-color: rgb(0, 0, 0, 1);
+    } */
+    header>div nav div label>span:not(:last-of-type){
+        margin-bottom: 5px;
+    }
+    header>div nav.menuActive div label>span{
+        transform: translateY(8px) rotate(315deg);
+    }
+    header>div nav.menuActive div label>span:nth-child(3){
+        transform: translateY(-8px) rotate(-315deg);
+    }
+    header>div nav.menuActive div label>span:nth-child(2){
+        opacity: 0;
+    }
+    
+
+    header>div nav>ul{
+        width: 100%; background-color: seashell; height: 100vh;
+        overflow: scroll; padding: 100px 0 200px; box-sizing: border-box;
+    }
+    header>div nav>ul>li{
+        padding: 0 10%; box-sizing: border-box; margin: 20px 0;
+    }
+    header>div nav ul>li>a{
+        line-height: 60px; display: none; color: #000000;
+    }
+    /* header>div nav ul>*{
+        float: left; 
+    } */
+    /* header>div nav ul>li{
+        margin-left: 60px; 
+    } */
+    header>div nav ul li ol{ 
+        height: 100%; width: 100%; transition: 0.5s ease-in-out; 
+        overflow: hidden; 
+        /* position: absolute; top: 100px; left: 0; */
+        /* display: none;  */
+        /* position: absolute; top: 100px; left: 0; */
+    }
+    header>div nav ul li ol li{
+        line-height: 35px; list-style: none; width: 100%; 
+        float: left; display: block; height: 100%; 
+    }
+    header>div nav ul li ol li>a{
+        color: #000000; font-size: 18px;
+    }
+    header>div nav ul li ol li:not(:first-child){
+        height: 0; 
+    }
+    header>div nav ul li ol.categoryActive li{
+        height: 100%; 
+    }
+    header>div nav ul li ol li:not(:nth-child(1)){
+        display: block;
+    }
+    header>div nav ul li ol li:nth-child(1),
+    header>div nav ul>li:last-child{
+        font-size: 25px; font-weight: 700; line-height: 60px;
+    }
+    header>div nav ul li ol li>a:hover{
+        color: #5e2e0c; 
+    }
+    header>div nav ul li ol.categoryActive li:first-child:before,
+    header>div nav ul li:last-child>a{
+        content: '>'; display: inline-block;
+    }
+    header>div nav ul::after{
+        content: ''; display: block; clear: both; visibility: hidden;
+    }
+    header>div nav>div{
+        padding: 0 10%; box-sizing: border-box; background-color: #ffffff;
+        border-top: 0.5px solid rgba(73, 73, 73, 0.3); 
+        width: 100%; display: flex; flex-direction: row;
+        justify-content: space-around; flex-wrap: wrap;
+        position: absolute; right: 0; top: 0;
+    }
+    header>div nav>div>a{
+        font-size: 1.3rem; min-width: 80px; 
+        color: #000000; 
+        font-weight: 500; opacity: 0.4;  
+        text-align: center; line-height: 100px; 
+    }
+    
+    header>div nav>div>a.mypageImg{
+        border-left: 0.5px solid rgba(73, 73, 73, 0.3); 
+        border-right: 0.5px solid rgba(73, 73, 73, 0.3); 
+        box-sizing: border-box; width: 33.33%;
+    }
+    header>div nav>div>a.header_Search{
+        position: absolute; right: 13%; top: -102px;
+        min-width: 58px; 
+    }
+    header>div nav>div>a.header_Search img{
+        width: 100%;
+    }
+    header>div nav>div a:hover{
+        opacity: 1;
+    }
+    header>div nav>div a img{
+        width: 100%; vertical-align: text-bottom;
+        max-width: 30px; 
     }
     
     
@@ -253,7 +478,8 @@ a{
         width: 100%;
     }
     footer div ol{
-        list-style: none; float: right; width: 80%; margin-bottom: 80px; 
+        list-style: none; float: right; width: 80%; 
+        padding-left: 10%; box-sizing: border-box; margin-bottom: 80px; 
     }
     
     footer div::after{
@@ -271,8 +497,8 @@ a{
     footer div ol li a{
         display: block; color: #000000;
     }
-    footer div ol li:not(:first-of-type){
-        padding-left: 10%; box-sizing: border-box;
+    footer div ol li:first-of-type{
+        padding-right: 10%; box-sizing: border-box; margin-bottom: 50px;
     }
     footer div ol li p,
     footer div ol li a{
@@ -321,7 +547,7 @@ a{
         line-height: 100px; display: block; max-width: 200px;
     }
     header>div h1 a img{
-        width: 100%; background-size: contain;
+        width: 100%; background-size: contain; vertical-align: middle;
     }
     header>div{
         padding: 0 3%; box-sizing: border-box;
@@ -335,23 +561,18 @@ a{
     header>div nav{
         width: 85%; float: right; 
     }
-    /*1  header>div nav>ul>li:first-of-type{
-        display: none;
-    } */
     header>div nav>ul{
         float: left;
     }
-    
     header>div nav ul>li>a{
         line-height: 100px; display: block; color: #000000; 
         font-weight: 500; 
     }
     header>div nav ul>*{
-        float: left; 
+        float: left;
     }
     header>div nav ul>li{
         margin-left: 60px;
-        /* 1:not(:first-of-type) */
     }
     header>div nav ul li ol{ 
         height: 0px; position: absolute; top: 100px; left: 0; width: 100%; padding: 0 20%; 
@@ -359,8 +580,7 @@ a{
         background-color: seashell; opacity: 0;
     }
     header>div nav>ul>li:not(:last-child):hover ol{
-        /* display: block;  */ opacity: 1;
-        height: 390px;
+        opacity: 1; height: 390px;
     }
     header>div nav ul li ol li{
         line-height: 35px; list-style: none; width: 20%; 
@@ -387,8 +607,9 @@ a{
         content: ''; display: block; clear: both; visibility: hidden;
     }
     header>div nav>div>a{
-        padding: 40px 15px; display: inline-block; color: #000000; 
-        font-weight: 500; opacity: 0.4; box-sizing: border-box; height: 100px;
+        padding: 0 15px; display: inline-block; color: #000000; 
+        font-weight: 500; opacity: 0.4; box-sizing: border-box; 
+        text-align: center; line-height: 100px; 
     }
     header>div nav ul>li>a:hover{
         color: #feb900;
@@ -397,8 +618,8 @@ a{
         opacity: 1;
     }
     header>div nav>div a img{
-        width: 100%; 
-        max-width: 18px; 
+        width: 100%; vertical-align: text-bottom;
+        max-width: 25px; 
         /* line-height: 0;  */
         /* vertical-align: bottom; */
     }
