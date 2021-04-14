@@ -1,7 +1,7 @@
 $(document).ready(function(){
     swiperSetting2();  
     swiperSetting();
-    test1(); 
+    // test1(); 
     // swiperSetting3();
     // swiperSetting4();
     bestSellerClick();
@@ -14,12 +14,24 @@ $(document).ready(function(){
 
 
 function headercategory(){
-  var category = $('header nav');
+  var category = $('header>div nav');
+  var hambOpen = $('header>div nav.menuActive');
+
   $('.mcheck').click(function(){
     $(this).toggleClass('hambActive');
     $(category).toggleClass('menuActive');
+
+    if(category.hasClass('menuActive')){
+      $('header').addClass('headerActive');
+      $('body').addClass('scrollCancle');
+    }else{
+      $('header').removeClass('headerActive');
+    }
   });
 }
+
+
+
 
 function hambmenuClick(){
   var incategory = $('li.incategory');
@@ -27,6 +39,7 @@ function hambmenuClick(){
     $(this).parent().toggleClass('categoryActive');
   });
 }
+
 
 function swiperSetting2(){
   var swiper2 = new Swiper('.name1', {
@@ -61,34 +74,6 @@ function swiperSetting(){
     }); 
 }
 
-
-
-// function swiperSetting3(){
-//   var swiper3 = new Swiper('.name2 .swiper-container', {
-//       slidesPerView: 3,
-//       navigation: {
-//           nextEl: '.name2 .swiper-button-next',
-//           prevEl: '.name2 .swiper-button-prev',
-//         },
-//       pagination: {
-//           el: '.name2 .swiper-container .swiper-pagination',
-//           clickable: true,
-//         },
-//       });
-// }
-// function swiperSetting4(){
-//   var swiper4 = new Swiper('.name3 .swiper-container', {
-//       slidesPerView: 3,
-//       navigation: {
-//           nextEl: '.name3 .swiper-button-next',
-//           prevEl: '.name3 .swiper-button-prev',
-//         },
-//       pagination: {
-//           el: '.name3 .swiper-container .swiper-pagination',
-//           clickable: true,
-//         },
-//       });
-// }
 
 
 
@@ -178,19 +163,19 @@ function bestSellerClick(){
 }
 
 
-function test1(){
+// function test1(){
   
-  $(window).scroll(function(){
-    if( $('.loccitane_banner').offset().top - 500 < $(window).scrollTop() ){
-      // console.log('test');
-      $('.loccitane_banner').addClass('active');
+//   $(window).scroll(function(){
+//     if( $('.loccitane_banner').offset().top - 500 < $(window).scrollTop() ){
+//       // console.log('test');
+//       $('.loccitane_banner').addClass('active');
       
-    }
-    if( $('.loccitane_banner').offset().top < $(window).scrollTop() ){
-      $('.loccitane_banner').removeClass('active');
-    }
-  });
-}
+//     }
+//     if( $('.loccitane_banner').offset().top < $(window).scrollTop() ){
+//       $('.loccitane_banner').removeClass('active');
+//     }
+//   });
+// }
 
 
 function headeropacity(){

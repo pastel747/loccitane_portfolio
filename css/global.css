@@ -42,13 +42,14 @@ a{
 .logout{
     display: none;
 }
-
+body.scrollCancle{
+    overflow: hidden;
+}
 
 @media screen and (min-width: 360px) and (max-width: 900px){
     header>div,
     footer div,
     .bestSeller>div,
-    .introduce,
     .loccitane_banner div{
         max-width: 1200px; margin: 0 auto;
     }
@@ -97,9 +98,7 @@ a{
     header>div nav>div a:not(:last-of-type){
         display: none;
     }
-    header>div nav.menuActive>ul{
-        display: block;
-    }
+    header>div nav.menuActive>ul,
     header>div nav.menuActive>div a:not(:last-of-type){
         display: block;
     }
@@ -112,9 +111,9 @@ a{
         border-radius: 1.5px; transition: 0.5s transform;
         width: 100%; height: 3px; display: block; background-color: rgba(0, 0, 0, 0.3);
     }
-    header>div nav div label.hambActive span{
+    /* header>div nav div label.hambActive span{
         transition: 0.5s transform;
-    }
+    } */
     /* header>div nav div label:hover>*{
         background-color: rgb(0, 0, 0, 1);
     } */
@@ -133,7 +132,7 @@ a{
     
 
     header>div nav>ul{
-        width: 100%; background-color: seashell; height: 100vh;
+        width: 100%; background-color: rgba(255, 245, 238, 1); height: 100vh;
         overflow: scroll; padding: 100px 0 200px; box-sizing: border-box;
     }
     header>div nav>ul>li{
@@ -142,22 +141,13 @@ a{
     header>div nav ul>li>a{
         line-height: 60px; display: none; color: #000000;
     }
-    /* header>div nav ul>*{
-        float: left; 
-    } */
-    /* header>div nav ul>li{
-        margin-left: 60px; 
-    } */
     header>div nav ul li ol{ 
-        height: 100%; width: 100%; transition: 0.5s ease-in-out; 
-        overflow: hidden; 
-        /* position: absolute; top: 100px; left: 0; */
-        /* display: none;  */
-        /* position: absolute; top: 100px; left: 0; */
+        height: 100%; width: 100%; overflow: hidden;
     }
     header>div nav ul li ol li{
         line-height: 35px; list-style: none; width: 100%; 
-        float: left; display: block; height: 100%; 
+        float: left; display: block; 
+        /* height: 100%;  */
     }
     header>div nav ul li ol li>a{
         color: #000000; font-size: 18px;
@@ -168,9 +158,9 @@ a{
     header>div nav ul li ol.categoryActive li{
         height: 100%; 
     }
-    header>div nav ul li ol li:not(:nth-child(1)){
+    /* header>div nav ul li ol li:not(:first-child){
         display: block;
-    }
+    } */
     header>div nav ul li ol li:nth-child(1),
     header>div nav ul>li:last-child{
         font-size: 25px; font-weight: 700; line-height: 60px;
@@ -228,7 +218,7 @@ a{
         padding: 80px 3%; box-sizing: border-box;
     }
     footer div h2{
-        max-width: 150px; float: left;
+        max-width: 150px; float: left; padding-right: 10%;
     }
     footer div h2 a{
         line-height: 50px; display: block;
@@ -237,8 +227,9 @@ a{
         width: 100%;
     }
     footer div ol{
-        list-style: none; float: right; width: 80%; 
-        padding-left: 10%; box-sizing: border-box; margin-bottom: 80px; 
+        list-style: none; float: right; width: 100%;
+        /* padding-left: 10%; box-sizing: border-box;   */
+        margin-bottom: 80px; 
     }
     
     footer div::after{
@@ -256,7 +247,7 @@ a{
     footer div ol li a{
         display: block; color: #000000;
     }
-    footer div ol li:first-of-type{
+    footer div ol li{
         padding-right: 10%; box-sizing: border-box; margin-bottom: 50px;
     }
     footer div ol li p,
@@ -469,7 +460,7 @@ a{
         padding: 80px 3%; box-sizing: border-box;
     }
     footer div h2{
-        max-width: 150px; float: left;
+        max-width: 150px; float: left; padding-right: 10%;
     }
     footer div h2 a{
         line-height: 50px; display: block;
@@ -478,8 +469,9 @@ a{
         width: 100%;
     }
     footer div ol{
-        list-style: none; float: right; width: 80%; 
-        padding-left: 10%; box-sizing: border-box; margin-bottom: 80px; 
+        list-style: none; float: right; width: 70%;
+        /* padding-left: 10%; box-sizing: border-box;   */
+        margin-bottom: 80px; 
     }
     
     footer div::after{
@@ -497,7 +489,7 @@ a{
     footer div ol li a{
         display: block; color: #000000;
     }
-    footer div ol li:first-of-type{
+    footer div ol li{
         padding-right: 10%; box-sizing: border-box; margin-bottom: 50px;
     }
     footer div ol li p,
