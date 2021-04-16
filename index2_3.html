@@ -21,20 +21,14 @@
                 </a>
             </h1>
             <nav>
-                <label for="mnav" class="mcheck">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
                 <ul>
-                    <!-- 1 <li>
-                        <img src="" alt="">
-                        <a href="join.html">LOG IN/JOIN US</a>
-                    </li> -->
                     <li>
                         <a href="index2_0.html">FACE</a>
                         <ol class="menu_active">
-                            <li>FACE</li>
+                            <li class="incategory">FACE</li>
+                            <li>
+                                <a href="index2_0.html">전체 보기</a>
+                            </li>
                             <li>
                                 <a href="index2_1.html">클렌저</a>
                             </li>
@@ -64,7 +58,7 @@
                     <li>
                         <a href="index2_0.html">BODY&HAND</a>
                         <ol>
-                            <li>BODY&HAND</li>
+                            <li class="incategory">BODY&HAND</li>
                             <li>
                                 <a href="index2_1.html">배스&샤워젤</a>
                             </li>
@@ -91,7 +85,7 @@
                     <li>
                         <a href="index2_0.html">HAIR</a>
                         <ol>
-                            <li>HAIR</li>
+                            <li class="incategory">HAIR</li>
                             <li>
                                 <a href="index2_1.html">샴푸</a>
                             </li>
@@ -107,22 +101,37 @@
                         </ol>
                     </li>
                     <li>
-                        <a href="index3.html">ABOUT US</a>
+                        <a class="incategory" href="index3.html">ABOUT US</a>
+                        <!-- <ol>
+                            <li class="incategory">ABOUT US</li>
+                        </ol> -->
                     </li>
                 </ul>
                 <div>
-                    <a href="join.html">JOIN US</a>
-                    <a href="login.html">LOG IN</a>
-                    <a href="" class="header_Search">SEARCH
+                    <!-- <a href="join.html">JOIN US</a> -->
+                    <a href="login.html">LOGIN</a>
+                    <!-- <a href="" class="logout">LOG OUT</a> -->
+                    <a href="login.html" class="mypageImg">
+                        <img src="images/icon_account3.png" alt="내설정">
+                        MY
+                    </a>
+                    <a href="login.html" class="header_Shoppingbag">
+                        <img src="images/icon_shoppingbag.png" alt="장바구니">
+                        CART
+                    </a>
+                    <a href="" class="header_Search">
                         <img src="images/icon_search.png" alt="검색하기">
                     </a>
-                    <a href="" class="header_Shoppingbag">BAG
-                        <img src="images/icon_shoppingbag.png" alt="장바구니">
-                    </a>
+                    <label for="mnav" class="mcheck">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
                 </div>
             </nav>
         </div>
     </header>
+    
     <section class="product_face">
         <h2>FACE</h2>
         <ul class="PD_category">
@@ -238,22 +247,18 @@
         <div>
             <h2>
                 <a href="">
-                    <img src="" alt="loccitaneLogo">
+                    <img src="images/loccitane_logo_footer.png" alt="loccitaneLogo">
                 </a>
             </h2>
             <ol>
                 <li>
                     <h3>COUSTOMER CENTER</h3>
-                    <address>
+                    <p>
                         06164 서울특별시 강남구 테헤란로 87길 36 도심공항타워 21층 <br>
-                        <!-- <dl>
-                            <dt>전화번호</dt>
-                            <dd>1588-4954</dd>
-                        </dl> -->
                         전화번호 : 1588-4954 <br>
                         팩스번호 : (02)2054-0500 <br>
                         이메일 : LOCCITANE@LOCCITANE.CO.KR
-                    </address>
+                    </p>
                 </li>
                 <li>
                     <h3>LINKS</h3>
@@ -268,6 +273,8 @@
                     <a href="">HAIR</a>
                 </li>
             </ol>
+
+
             <span></span>
             <p></p>
         </div>

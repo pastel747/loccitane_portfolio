@@ -9,8 +9,13 @@ $(document).ready(function(){
     price();
     headercategory();
     hambmenuClick();
+    hambmenuPlace();
 });
 
+
+function hambmenuPlace(){
+  
+}
 
 
 function headercategory(){
@@ -26,6 +31,7 @@ function headercategory(){
       $('body').addClass('scrollCancle');
     }else{
       $('header').removeClass('headerActive');
+      $('body').removeClass('scrollCancle');
     }
   });
 }
