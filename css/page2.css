@@ -151,6 +151,7 @@
     .product_face ul>li>a{
         color: rgba(73, 73, 73);
     }
+    
     .PD_category{
         margin-bottom: 50px;
         justify-content: space-between; padding: 20px 5%; box-sizing: border-box;
@@ -272,6 +273,18 @@
     }
     .product_face ul>li>a{
         color: rgba(73, 73, 73);
+    }
+    .PD_categoryButton{
+        color: rgba(73, 73, 73, 0.7); position: relative; width: 200px;
+        padding: 0 3%; margin-top: 30px; cursor: pointer;
+    }
+    .PD_categoryButton p{
+        padding: 20px 60px 20px 20px; box-sizing: border-box;
+        border: 2px solid rgba(73, 73, 73, 0.2); 
+    }
+    .PD_categoryButton::before{
+        color: rgba(73, 73, 73, 0.7);
+        content: '+'; display: block; position: absolute; right: 50px; top: 16px; font-size: 1.5rem; 
     }
     .PD_category{
         margin-bottom: 50px;
