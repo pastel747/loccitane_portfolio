@@ -509,7 +509,8 @@ body.scrollCancle{
     footer div,
     .bestSeller>div,
     .introduce,
-    .loccitane_banner div{
+    .loccitane_banner div,
+    .PD_ctst{
         max-width: 1400px; margin: 0 auto;
     }
 

@@ -7,7 +7,8 @@ $(document).ready(function(){
     priceTest3();
     price();
     // test();
-
+    ct_stOpen();
+    stSelectText();
 
     $('ul.PD_align li a').click(function(e){
         // console.log(e);
@@ -15,6 +16,30 @@ $(document).ready(function(){
     }); 
 });
 
+function stSelectText(){
+    var sortButton = $('.PD_sortButton p');
+    var sortSelect;
+    $('.PD_align li>a').click(function(){
+        sortButton.html('');
+        sortSelect = $(this).html();
+        sortButton.html(sortSelect);
+    });
+}
+
+function ct_stOpen(){
+    var categoryButton = $('.PD_categoryButton p');
+    var sortButton = $('.PD_sortButton p');
+
+    categoryButton.click(function(){
+        $(this).toggleClass('ctButtonActive');
+        $('.PD_category').toggleClass('ctButtonActive');
+    });
+    sortButton.click(function(){
+        $(this).toggleClass('stButtonActive');
+        $('.PD_align').toggleClass('stButtonActive');
+    });
+    
+}
 
 
 function price(){
