@@ -105,18 +105,11 @@ body.scrollCancle{
     header>div nav div label{
         display: inline-block; width: 28px;
         position: absolute; right: 5%; top: -60px;
-        /* padding: 0 15%; */
     }
     header>div nav div label span{
         border-radius: 1.5px; transition: 0.5s transform;
         width: 100%; height: 3px; display: block; background-color: rgba(0, 0, 0, 0.3);
     }
-    /* header>div nav div label.hambActive span{
-        transition: 0.5s transform;
-    } */
-    /* header>div nav div label:hover>*{
-        background-color: rgb(0, 0, 0, 1);
-    } */
     header>div nav div label>span:not(:last-of-type){
         margin-bottom: 5px;
     }
@@ -137,6 +130,7 @@ body.scrollCancle{
     }
     header>div nav>ul>li{
         padding: 0 10%; box-sizing: border-box; margin: 20px 0;
+        cursor: pointer;
     }
     header>div nav ul>li>a{
         line-height: 60px; display: none; color: #000000;
@@ -146,8 +140,7 @@ body.scrollCancle{
     }
     header>div nav ul li ol li{
         line-height: 35px; list-style: none; width: 100%; 
-        float: left; display: block; 
-        /* height: 100%;  */
+        cursor: pointer; float: left; display: block; 
     }
     header>div nav ul li ol li>a{
         color: #000000; font-size: 18px;
@@ -158,9 +151,6 @@ body.scrollCancle{
     header>div nav ul li ol.categoryActive li{
         height: 100%; 
     }
-    /* header>div nav ul li ol li:not(:first-child){
-        display: block;
-    } */
     header>div nav ul li ol li:nth-child(1),
     header>div nav ul>li:last-child{
         font-size: 25px; font-weight: 700; line-height: 60px;
@@ -228,7 +218,6 @@ body.scrollCancle{
     }
     footer div ol{
         list-style: none; float: right; width: 100%;
-        /* padding-left: 10%; box-sizing: border-box;   */
         margin-bottom: 80px; 
     }
     
@@ -323,7 +312,6 @@ body.scrollCancle{
     header>div nav div label{
         display: inline-block; width: 28px;
         position: absolute; right: 5%; top: -60px;
-        /* padding: 0 15%; */
     }
     header>div nav div label span{
         border-radius: 1.5px; transition: 0.5s transform;
@@ -332,9 +320,6 @@ body.scrollCancle{
     header>div nav div label.hambActive span{
         transition: 0.5s transform;
     }
-    /* header>div nav div label:hover>*{
-        background-color: rgb(0, 0, 0, 1);
-    } */
     header>div nav div label>span:not(:last-of-type){
         margin-bottom: 5px;
     }
@@ -355,26 +340,19 @@ body.scrollCancle{
     }
     header>div nav>ul>li{
         padding: 0 10%; box-sizing: border-box; margin: 20px 0;
+        cursor: pointer;
     }
     header>div nav ul>li>a{
         line-height: 60px; display: none; color: #000000;
     }
-    /* header>div nav ul>*{
-        float: left; 
-    } */
-    /* header>div nav ul>li{
-        margin-left: 60px; 
-    } */
     header>div nav ul li ol{ 
         height: 100%; width: 100%; transition: 0.5s ease-in-out; 
         overflow: hidden; 
-        /* position: absolute; top: 100px; left: 0; */
-        /* display: none;  */
-        /* position: absolute; top: 100px; left: 0; */
     }
     header>div nav ul li ol li{
         line-height: 35px; list-style: none; width: 100%; 
         float: left; display: block; height: 100%; 
+        cursor: pointer;
     }
     header>div nav ul li ol li>a{
         color: #000000; font-size: 18px;
@@ -383,7 +361,7 @@ body.scrollCancle{
         height: 0; 
     }
     header>div nav ul li ol.categoryActive li{
-        height: 100%; 
+        cursor: pointer; height: 100%; 
     }
     header>div nav ul li ol li:not(:nth-child(1)){
         display: block;
@@ -404,21 +382,21 @@ body.scrollCancle{
     }
     header>div nav>div{
         padding: 0 10%; box-sizing: border-box; background-color: #ffffff;
-        border-top: 0.5px solid rgba(73, 73, 73, 0.3); 
+        border-top: 0.5px solid rgb(184, 184, 184); 
         width: 100%; display: flex; flex-direction: row;
         justify-content: space-around; flex-wrap: wrap;
         position: absolute; right: 0; top: 0;
     }
     header>div nav>div>a{
         font-size: 1.3rem; min-width: 80px; 
-        color: #000000; 
-        font-weight: 500; opacity: 0.4;  
+        color: rgb(73, 73, 73); 
+        font-weight: 500; opacity: 0.4;
         text-align: center; line-height: 100px; 
     }
     
     header>div nav>div>a.mypageImg{
-        border-left: 0.5px solid rgba(73, 73, 73, 0.3); 
-        border-right: 0.5px solid rgba(73, 73, 73, 0.3); 
+        border-left: 0.5px solid rgb(73, 73, 73);   
+        border-right: 0.5px solid rgb(73, 73, 73);  
         box-sizing: border-box; width: 33.33%;
     }
     header>div nav>div>a.header_Search{
@@ -426,11 +404,11 @@ body.scrollCancle{
         min-width: 58px; 
     }
     header>div nav>div>a.header_Search img{
-        width: 100%;
+        width: 100%; 
     }
-    header>div nav>div a:hover{
+    /* header>div nav>div a:hover{
         opacity: 1;
-    }
+    } */
     header>div nav>div a img{
         width: 100%; vertical-align: text-bottom;
         max-width: 30px; 
@@ -470,7 +448,6 @@ body.scrollCancle{
     }
     footer div ol{
         list-style: none; float: right; width: 70%;
-        /* padding-left: 10%; box-sizing: border-box;   */
         margin-bottom: 80px; 
     }
     
@@ -567,6 +544,7 @@ body.scrollCancle{
     }
     header>div nav ul>li{
         margin-left: 40px;
+        cursor: pointer;
     }
     header>div nav ul li ol{ 
         height: 0px; position: absolute; top: 100px; left: 0; width: 100%; padding: 0 20%; 
@@ -578,6 +556,7 @@ body.scrollCancle{
     }
     header>div nav ul li ol li{
         line-height: 35px; list-style: none; width: 20%; 
+        cursor: pointer;
     }
     header>div nav ul li ol li>a{
         color: #000000; font-size: 18px;
@@ -591,9 +570,6 @@ body.scrollCancle{
     header>div nav ul li ol li>a:hover:before{
         content: '>'; display: inline-block;
     }
-    /* header>div nav ul li ol::after{
-        content: ''; 
-    } */
     header>div nav>div{
         float: right; height: 100px;
     }
@@ -613,13 +589,8 @@ body.scrollCancle{
     }
     header>div nav>div a img{
         width: 100%; vertical-align: text-bottom;
-        max-width: 25px; 
-        /* line-height: 0;  */
-        /* vertical-align: bottom; */
+        max-width: 25px;
     }
-    /* header>div nav>div a:not(:first-of-type):before{
-        content: '|'; display: inline-block; padding-right: 30px;
-    } */
     header>div nav ul::after{
         content: ''; display: block; clear: both; visibility: hidden;
     }

@@ -1,25 +1,55 @@
 
 $(document).ready(function(){
-    // test1();
-    // price();
-    // priceTest();
-    // priceTest2();
+    // categoryText();
     priceTest3();
     price();
-    // test();
     ct_stOpen();
     stSelectText();
+    headercategory();
+    hambmenuClick();
 
-    $('ul.PD_align li a').click(function(e){
-        // console.log(e);
+    $('ul.PD_sort li a').click(function(e){
         e.preventDefault();
     }); 
 });
 
+
+function headercategory(){
+    var category = $('header>div nav');
+
+    $('.mcheck').click(function(){
+    $(this).toggleClass('hambActive');
+    $(category).toggleClass('menuActive');
+
+    if(category.hasClass('menuActive')){
+        $('header').addClass('headerActive');
+        $('body').addClass('scrollCancle');
+    }else{
+        $('header').removeClass('headerActive');
+        $('body').removeClass('scrollCancle');
+    }
+    });
+}
+
+function hambmenuClick(){
+    var incategory = $('li.incategory');
+    incategory.click(function(){
+    $(this).parent().toggleClass('categoryActive');
+    });
+}
+
+// function categoryText(){
+//     var title = $('.product_face>h2').html();
+//     var categoryName = $('.product_face').attr('data-name');
+
+//     $('.PD_categoryButton>p').html(categoryName);
+//     title = 
+// }
+
 function stSelectText(){
     var sortButton = $('.PD_sortButton p');
     var sortSelect;
-    $('.PD_align li>a').click(function(){
+    $('.PD_sort li>a').click(function(){
         sortButton.html('');
         sortSelect = $(this).html();
         sortButton.html(sortSelect);
@@ -36,14 +66,14 @@ function ct_stOpen(){
     });
     sortButton.click(function(){
         $(this).toggleClass('stButtonActive');
-        $('.PD_align').toggleClass('stButtonActive');
+        $('.PD_sort').toggleClass('stButtonActive');
     });
     
 }
 
 
 function price(){
-    $('ul.PD_align li.high').click(function(){
+    $('ul.PD_sort li.high').click(function(){
         $('.product_face ol li').each(function(){
             // alert( $(this).attr('data-price') );
             // var priceTest = $(this).attr('data-price');
@@ -63,7 +93,7 @@ function price(){
 
 function priceTest(){
 
-    $('ul.PD_align li.high').click(function(){
+    $('ul.PD_sort li.high').click(function(){
         
         // var test = $('.product_face ol li').length;
         
@@ -105,7 +135,7 @@ function priceTest(){
 function priceTest2(){
 
 
-    $('ul.PD_align li.high').click(function(){
+    $('ul.PD_sort li.high').click(function(){
 
         var length = $('.product_face ol li').length();
 
@@ -143,7 +173,7 @@ function priceTest2(){
 function priceTest3(){
     var i = 0;
 
-    $('ul.PD_align li.high').click(function(){
+    $('ul.PD_sort li.high').click(function(){
         // var length = $('.product_face ol li').length();
 
         // var a = $('.product_face ol li').eq(i).attr('data-price');
@@ -191,7 +221,7 @@ function priceTest3(){
         // alert('끝2');
         
     });
-    $('ul.PD_align li.row').click(function(){
+    $('ul.PD_sort li.row').click(function(){
         
         $('.product_face ol li').each(function(){
             var T = $(this).attr('data-price');
@@ -201,7 +231,7 @@ function priceTest3(){
         
     });
 
-    $('ul.PD_align li.hot').click(function(){
+    $('ul.PD_sort li.hot').click(function(){
         
         $('.product_face ol li').each(function(){
             $(this).css('order', 0);
@@ -213,7 +243,7 @@ function priceTest3(){
         
     });
 
-    $('ul.PD_align li.new').click(function(){
+    $('ul.PD_sort li.new').click(function(){
         
         $('.product_face ol li').each(function(){
             $(this).css('order', 0);

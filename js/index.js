@@ -1,21 +1,13 @@
 $(document).ready(function(){
     swiperSetting2();  
     swiperSetting();
-    // test1(); 
-    // swiperSetting3();
-    // swiperSetting4();
     bestSellerClick();
     headeropacity();
     price();
     headercategory();
     hambmenuClick();
-    hambmenuPlace();
 });
 
-
-function hambmenuPlace(){
-  
-}
 
 
 function headercategory(){

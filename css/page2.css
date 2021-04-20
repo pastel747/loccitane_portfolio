@@ -3,7 +3,7 @@
 @media screen and (min-width: 360px) and (max-width: 499px){
     
     .product_face{
-        padding-top: 100px; margin: 0 auto; 
+        padding-top: 100px; margin: 0 auto; position: relative;
     }
     .product_face h2{
         line-height: 150px; text-align: center; color: #ffffff; position: relative;
@@ -15,36 +15,81 @@
         width: 100%; height: 100%; z-index: -1;
         background: url('../images/face_backgroundimg.jpg') center top no-repeat; 
     }
-    .product_face ul>li:hover a,
-    .product_face ul>li.menu_active a{
+    .PD_category>li:hover a,
+    .PD_sort>li.menu_active a{
         color: #feb900;
     }
-    .product_face ul>li{
-        list-style: none; 
-        /*  */
+    .PD_ctst{
+        margin-top: 20px; padding: 0 3%; box-sizing: border-box; position: relative;
     }
-    .product_face ul::after{
-        content: ''; display: block; clear: both;
+    .PD_ctst div ul>li{
+        list-style: none;
     }
-    .product_face ul>li>a{
-        color: rgba(73, 73, 73);
+    .PD_ctst ul>li>a{
+        color: rgba(73, 73, 73, 0.7);
     }
+    
+    .PD_categoryButton,
+    .PD_sortButton{
+        position: relative; 
+        /* height: 100%; */
+        font-size: 1.2rem; 
+        float: left; width: 48%;
+    }
+    .PD_sortButton{
+        margin-left: 4%;
+    }
+    .PD_categoryButton p,
+    .PD_categoryButton ul{
+        cursor: pointer;
+    }
+    .PD_categoryButton p,
+    .PD_sortButton p{
+        padding: 20px 60px 20px 20px; box-sizing: border-box; color: rgba(73, 73, 73, 0.7);
+        border: 2px solid rgb(211, 211, 211); font-size: 1.1rem;
+        /* width: 200px; */
+    }
+    .PD_categoryButton::before,
+    .PD_sortButton::before{
+        color: rgb(211, 211, 211);
+        content: '+'; display: block; position: absolute; right: 10%; top: 18px; 
+        font-size: 1.5rem; cursor: pointer;
+    }
+
     .PD_category{
-        margin-bottom: 50px;
-        justify-content: space-evenly; padding: 20px 10%; box-sizing: border-box;
-        width: 100%; display: flex; border-bottom: 0.5px solid rgba(73, 73, 73, 0.15); 
+        font-size: 1.1rem; margin: 0 auto; display: none; list-style: none; 
+        color: rgb(211, 211, 211); box-sizing: border-box; padding: 0 3%; width: 45%;
+        margin: 0 auto;
     }
+    
+    .PD_sortButton{
+        height: inherit; cursor: pointer; 
+    }
+    
+
+    .PD_sort,
+    .PD_category{
+        background-color: #ffffff;
+        border: 2px solid rgb(211, 211, 211);
+    }
+    .PD_sort{
+        width: 100%; display: none; box-sizing: border-box; 
+    }
+    .PD_sort.stButtonActive,
+    .PD_category.ctButtonActive{
+        display: block; position: absolute; top: 60px;
+    }
+    .PD_category.ctButtonActive
+    .PD_sort li{
+        min-width: 196px;
+    }
+    .PD_sort li,
     .PD_category li{
-        width: 100%; text-align: center; padding: 10px; box-sizing: border-box;
+        line-height: 2.5rem; font-size: 1.2rem; background-color: #ffffff;
+        box-sizing: border-box; padding: 10px 20px; cursor: pointer; 
     }
-    .PD_category li:not(:first-child){
-        border-left: 0.5px solid rgba(73, 73, 73, 0.15); 
-    }
-    .PD_align{
-        display: flex; justify-content: flex-end; box-sizing: border-box; padding: 0 10%; 
-    }
-    .PD_align li{
-        padding: 0 1.8%; line-height: 80px; font-size: 1.2rem;
+    .PD_ctst::after{
+        content: ''; display: block; clear: both; visibility: hidden;
     }
     .product_face ol{
         max-width: 1400px; margin: 0 auto; display: flex; 
@@ -66,28 +111,25 @@
         flex-wrap: wrap;
         align-content: center;
         flex-direction: column; transition: background-color 0.1s ease-in-out;
-        min-height: 450px; 
-        /* background-color: #f8f8f8; */
-        /* border: 1px solid black; */
-        /* background: rgba(238, 238, 238, 0);
-        transition: 0.2s ease-in-out; */
+        min-height: 400px; 
         list-style: none; box-sizing: border-box;
         min-width: 200px; 
         width: 25%;
+        cursor: pointer;
+
     }
     .product_face ol li:hover::after{
         transform: translateY(0px);
     }
     .product_face ol li>img{
-        width: 100%; max-width: 340px; padding-top: 100px; box-sizing: border-box;
+        width: 100%; max-width: 340px; padding-top: 50px; box-sizing: border-box;
     }
     .product_face ol li dl{
-        margin-bottom: 10px; line-height: 1.5rem;
-        /* width: 100%; */
+        margin-bottom: 10px; line-height: 1.3rem;
     }
     .product_face ol li dl>*{
         text-align: center;
-        margin: 0 auto 10px; 
+        margin: 0 auto 5px; 
         width: 80%;
     }
     .product_face ol li div{
@@ -107,7 +149,7 @@
         transform: translateY(0px);
     }
     span.PD_cart{
-        width: 70%; padding: 0 23%; 
+        width: 69%; padding: 0 23%; 
     }
     span.PD_cart:hover{
         background: #feb900; transition: 0.3s; 
@@ -125,129 +167,6 @@
 @media screen and (min-width: 500px) and (max-width: 999px){
 
     .product_face{
-        padding-top: 100px; margin: 0 auto; 
-    }
-    .product_face h2{
-        line-height: 150px; text-align: center; color: #ffffff; position: relative;
-        background-color: rgba(0, 0, 0, 0.1); font-size: 30px;
-    }
-    .product_face h2:after{
-        font-size: 30px; z-index: 0;
-        content: ''; display: block; position: absolute; left: 0; top: 0; 
-        width: 100%; height: 100%; z-index: -1;
-        background: url('../images/face_backgroundimg.jpg') center top no-repeat; 
-    }
-    .product_face ul>li:hover a,
-    .product_face ul>li.menu_active a{
-        color: #feb900;
-    }
-    .product_face ul>li{
-        list-style: none; 
-        /*  */
-    }
-    .product_face ul::after{
-        content: ''; display: block; clear: both;
-    }
-    .product_face ul>li>a{
-        color: rgba(73, 73, 73);
-    }
-    
-    .PD_category{
-        margin-bottom: 50px;
-        justify-content: space-between; padding: 20px 5%; box-sizing: border-box;
-        width: 100%; display: flex; border-bottom: 0.5px solid rgba(73, 73, 73, 0.15); 
-    }
-    .PD_category li{
-        /* width: 100%; max-width: 120px; */
-        text-align: center; padding: 10px 3%; 
-        box-sizing: border-box; 
-    }
-    .PD_category li:not(:first-child){
-        border-left: 0.5px solid rgba(73, 73, 73, 0.15); 
-    }
-    .PD_align{
-        display: flex; justify-content: flex-end; box-sizing: border-box; padding: 0 10%; 
-    }
-    .PD_align li{
-        padding: 0 1.8%; line-height: 80px; font-size: 1.2rem;
-    }
-    .product_face ol{
-        max-width: 1400px; margin: 0 auto; display: flex; 
-        padding: 0 3%;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-    
-    
-    .product_face ol li.show{
-        display: flex;
-    }
-    .product_face ol li::after{
-        content: ''; display: block; background: rgba(238, 238, 238, 1); transition: 0.2s ease-in-out;
-        transform: translateY(510px);
-    }
-    .product_face ol li{
-        display: none; 
-        flex-wrap: wrap;
-        align-content: center;
-        flex-direction: column; transition: background-color 0.1s ease-in-out;
-        min-height: 500px; 
-        /* background-color: #f8f8f8; */
-        /* border: 1px solid black; */
-        /* background: rgba(238, 238, 238, 0);
-        transition: 0.2s ease-in-out; */
-        list-style: none; box-sizing: border-box;
-        min-width: 200px; 
-        width: 25%;
-    }
-    .product_face ol li:hover::after{
-        transform: translateY(0px);
-    }
-    .product_face ol li>img{
-        width: 100%; max-width: 340px; padding-top: 100px; box-sizing: border-box;
-    }
-    .product_face ol li dl{
-        margin-bottom: 10px; line-height: 1.5rem;
-        /* width: 100%; */
-    }
-    .product_face ol li dl>*{
-        text-align: center;
-        margin: 0 auto; 
-        width: 80%;
-    }
-    .product_face ol li div{
-        width: 90%; margin: 0 auto; overflow: hidden; height: 50px;
-    }
-    .product_face ol li div::after{
-        content: ''; display: block; clear: both; visibility: hidden;
-    }
-    .product_face ol li div span{
-        height: 50px; display: block; float: left; 
-        transition: transform 0.2s ease-in-out; 
-        transform: translateY(50px);
-        box-sizing: border-box; border: 1px solid rgba(73, 73, 73, 0.1); background-color: #ffffff;
-        line-height: 50px;
-    }
-    .product_face ol li:hover div span{
-        transform: translateY(0px);
-    }
-    span.PD_cart{
-        width: 70%; padding: 0 23%; 
-    }
-    span.PD_cart:hover{
-        background: #feb900; transition: 0.3s; 
-    }
-    span.PD_heart{
-        width: 27%; margin-left: 10px; padding: 0 10%;
-    }
-    span.PD_heart img{
-        width: 100%; max-width: 20px; vertical-align: middle;
-    }
-}
-
-@media screen and (min-width: 1000px){
-
-    .product_face{
         padding-top: 100px; margin: 0 auto; position: relative;
     }
     .product_face h2{
@@ -261,31 +180,27 @@
         background: url('../images/face_backgroundimg.jpg') center top no-repeat; 
     }
     .PD_category>li:hover a,
-    .PD_align>li.menu_active a{
+    .PD_sort>li.menu_active a{
         color: #feb900;
     }
     .PD_ctst{
-        margin-top: 20px; padding: 0 3%; box-sizing: border-box;
-    }
-    .PD_ctst::after{
-        content: ''; display: block; clear: both; visibility: hidden;
+        margin-top: 20px; padding: 0 3%; box-sizing: border-box; position: relative;
     }
     .PD_ctst div ul>li{
         list-style: none;
     }
-    .PD_ctst div ul>li>a{
+    .PD_ctst ul>li>a{
         color: rgba(73, 73, 73, 0.7);
     }
-    /* .PD_ct{
-        position: relative;
-    } */
-    
     
     .PD_categoryButton,
     .PD_sortButton{
         position: relative; height: 100%;
         font-size: 1.2rem; 
         float: left;
+    }
+    .PD_sortButton{
+        margin-left: 10px;
     }
     .PD_categoryButton p,
     .PD_categoryButton ul{
@@ -304,54 +219,208 @@
         font-size: 1.5rem; cursor: pointer;
     }
 
-    
-
-    /* .PD_categoryButton:hover p,
-    .PD_sortButton:hover p{
-        color: #feb900; border: 2px solid #feb900;
-    }
-    .PD_categoryButton:hover:before,
-    .PD_sortButton:hover:before{
-        color: #feb900; 
-    } */
-
     .PD_category{
-        font-size: 1.1rem; margin: 0 auto; padding: 0 3%; display: none;
-        color: rgb(211, 211, 211); box-sizing: border-box;
+        font-size: 1.1rem; margin: 0 auto; display: none; list-style: none; 
+        color: rgb(211, 211, 211); box-sizing: border-box; padding: 0 3%; width: 94%;
+        margin: 0 auto;
     }
-    .PD_category.ctButtonActive{
-        display: block; 
-    }
+    
     .PD_sortButton{
-        /* position: absolute; left: 250px; top: 0;  */
         height: inherit; cursor: pointer; 
     }
     
 
-    .PD_align,
+    .PD_sort,
     .PD_category{
-        position: relative; 
-        top: -2px;
-        box-sizing: border-box; background-color: #ffffff;
-        /* display: flex; justify-content: left; flex-wrap: wrap; */
+        background-color: #ffffff;
         border: 2px solid rgb(211, 211, 211);
     }
-    .PD_align{
-        width: 200px; display: none;
+    .PD_sort{
+        width: 200px; display: none; box-sizing: border-box; 
     }
-    .PD_align.stButtonActive{
-        display: block;
+    .PD_sort.stButtonActive,
+    .PD_category.ctButtonActive{
+        display: block; position: absolute; top: 60px; 
     }
-    
-    .PD_align li,
+    .PD_category.ctButtonActive
+    .PD_sort li{
+        min-width: 196px;
+    }
+    .PD_sort li,
     .PD_category li{
         line-height: 2.5rem; font-size: 1.2rem; background-color: #ffffff;
-        box-sizing: border-box; padding: 10px 20px; cursor: pointer; min-width: 100px;
+        box-sizing: border-box; padding: 10px 20px; cursor: pointer; 
     }
     .PD_category li{
+        float: left; 
+    }
+    .PD_category::after,
+    .PD_ctst::after{
+        content: ''; display: block; clear: both; visibility: hidden;
+    }
+    .product_face ol{
+        max-width: 1400px; margin: 0 auto; display: flex; 
+        padding: 0 3%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    
+    .product_face ol li.show{
+        display: flex;
+    }
+    .product_face ol li::after{
+        content: ''; display: block; background: rgba(238, 238, 238, 1); transition: 0.2s ease-in-out;
+        transform: translateY(510px);
+    }
+    .product_face ol li{
+        display: none; 
+        flex-wrap: wrap;
+        align-content: center;
+        flex-direction: column; transition: background-color 0.1s ease-in-out;
+        min-height: 420px;
+        list-style: none; box-sizing: border-box;
+        min-width: 200px; 
+        width: 25%;
+        cursor: pointer;
+    }
+    .product_face ol li:hover::after{
+        transform: translateY(0px);
+    }
+    .product_face ol li>img{
+        width: 100%; max-width: 340px; padding-top: 50px; box-sizing: border-box;
+    }
+    .product_face ol li dl{
+        margin-bottom: 10px; line-height: 1.3rem;
+    }
+    .product_face ol li dl>*{
+        text-align: center;
+        margin: 0 auto 5px; 
+        width: 80%;
+    }
+    .product_face ol li div{
+        width: 90%; margin: 0 auto; overflow: hidden; height: 50px;
+    }
+    .product_face ol li div::after{
+        content: ''; display: block; clear: both; visibility: hidden;
+    }
+    .product_face ol li div span{
+        height: 50px; display: block; float: left; 
+        transition: transform 0.2s ease-in-out; 
+        transform: translateY(50px);
+        box-sizing: border-box; border: 1px solid rgba(73, 73, 73, 0.1); background-color: #ffffff;
+        line-height: 50px;
+    }
+    .product_face ol li:hover div span{
+        transform: translateY(0px);
+    }
+    span.PD_cart{
+        width: 69%; padding: 0 23%; 
+    }
+    span.PD_cart:hover{
+        background: #feb900; transition: 0.3s; 
+    }
+    span.PD_heart{
+        width: 27%; margin-left: 10px; padding: 0 10%;
+    }
+    span.PD_heart img{
+        width: 100%; max-width: 20px; vertical-align: middle;
+    }
+}
+
+@media screen and (min-width: 1000px){
+
+    .product_face{
+        padding: 100px 0; margin: 0 auto; position: relative;
+    }
+    .product_face h2{
+        line-height: 150px; text-align: center; color: #ffffff; position: relative;
+        background-color: rgba(0, 0, 0, 0.1); font-size: 30px;
+    }
+    .product_face h2:after{
+        font-size: 30px; z-index: 0;
+        content: ''; display: block; position: absolute; left: 0; top: 0; 
+        width: 100%; height: 100%; z-index: -1;
+        background: url('../images/face_backgroundimg.jpg') center top no-repeat; 
+    }
+    .PD_category>li:hover a,
+    .PD_sort>li.menu_active a{
+        color: #feb900;
+    }
+    .PD_ctst{
+        margin-top: 20px; padding: 0 3%; box-sizing: border-box; position: relative;
+    }
+    .PD_ctst div ul>li{
+        list-style: none;
+    }
+    .PD_ctst ul>li>a{
+        color: rgba(73, 73, 73, 0.7);
+    }
+    
+    .PD_categoryButton,
+    .PD_sortButton{
+        position: relative; height: 100%;
+        font-size: 1.2rem; 
         float: left;
     }
-    .PD_category::after{
+    .PD_sortButton{
+        margin-left: 10px;
+    }
+    .PD_categoryButton p,
+    .PD_categoryButton ul{
+        cursor: pointer;
+    }
+    .PD_categoryButton p,
+    .PD_sortButton p{
+        padding: 20px 60px 20px 20px; box-sizing: border-box; color: rgba(73, 73, 73, 0.7);
+        border: 2px solid rgb(211, 211, 211); font-size: 1.1rem;
+        width: 200px;
+    }
+    .PD_categoryButton::before,
+    .PD_sortButton::before{
+        color: rgb(211, 211, 211);
+        content: '+'; display: block; position: absolute; left: 165px; top: 18px; 
+        font-size: 1.5rem; cursor: pointer;
+    }
+
+    .PD_category{
+        font-size: 1.1rem; margin: 0 auto; display: none; list-style: none; 
+        color: rgb(211, 211, 211); box-sizing: border-box; padding: 0 3%; width: 94%;
+        margin: 0 auto;
+    }
+    
+    .PD_sortButton{
+        height: inherit; cursor: pointer; 
+    }
+    
+
+    .PD_sort,
+    .PD_category{
+        background-color: #ffffff;
+        border: 2px solid rgb(211, 211, 211);
+    }
+    .PD_sort{
+        width: 200px; display: none; box-sizing: border-box; 
+    }
+    .PD_sort.stButtonActive,
+    .PD_category.ctButtonActive{
+        display: block; position: absolute; top: 60px; 
+        
+    }
+    .PD_category.ctButtonActive
+    .PD_sort li{
+        min-width: 196px;
+    }
+    .PD_sort li,
+    .PD_category li{
+        line-height: 2.5rem; font-size: 1.2rem; background-color: #ffffff;
+        box-sizing: border-box; padding: 10px 20px; cursor: pointer; 
+    }
+    .PD_category li{
+        float: left; 
+    }
+    .PD_category::after,
+    .PD_ctst::after{
         content: ''; display: block; clear: both; visibility: hidden;
     }
     
@@ -362,7 +431,7 @@
 
     .product_face ol{
         max-width: 1400px; margin: 0 auto; display: flex; 
-        /* clear: both; */
+        clear: both;
         padding: 0 3%; justify-content: space-around; flex-wrap: wrap;
     }
     .product_face ol li.show{
@@ -381,6 +450,7 @@
         list-style: none; box-sizing: border-box;
         min-width: 200px; 
         width: 25%;
+        cursor: pointer;
     }
     .product_face ol li:hover::after{
         transform: translateY(0px);
@@ -390,7 +460,6 @@
     }
     .product_face ol li dl{
         margin-bottom: 10px; line-height: 1.5rem;
-        /* width: 100%; */
     }
     .product_face ol li dl>*{
         text-align: center;
@@ -414,7 +483,7 @@
         transform: translateY(0px);
     }
     span.PD_cart{
-        width: 70%; padding: 0 23%; 
+        width: 69%; padding: 0 23%; 
     }
     span.PD_cart:hover{
         background: #feb900; transition: 0.3s; 
