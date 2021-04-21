@@ -6,7 +6,7 @@ $(document).ready(function(){
 });
 
 function idCheck(){
-    var idInput = $('#pUserN');
+    var idInput = $('#pUserID');
     
     
 }

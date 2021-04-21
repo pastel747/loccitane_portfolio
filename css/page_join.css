@@ -141,5 +141,16 @@
     .joinForm>.userAddress>span:nth-child(2){
         margin-bottom: 30px;
     }
+
+    .conform>div>span>input{
+        display: none;
+    }
+    .conform>div>span>label::before{
+        content: '+'; 
+    }
+    .conform>div>span>label p{
+        float: left; 
+    }
+
     
 }
