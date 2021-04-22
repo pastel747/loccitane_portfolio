@@ -116,49 +116,51 @@
         min-width: 200px; 
         width: 25%;
         cursor: pointer;
-
+    }
+    .product_face ol li a{
+        display: 100%; width: 100%; color: #000000;
     }
     .product_face ol li:hover::after{
         transform: translateY(0px);
     }
-    .product_face ol li>img{
+    .product_face ol li a>img{
         width: 100%; max-width: 340px; padding-top: 50px; box-sizing: border-box;
     }
-    .product_face ol li dl{
+    .product_face ol li a dl{
         margin-bottom: 10px; line-height: 1.3rem;
     }
-    .product_face ol li dl>*{
+    .product_face ol li a dl>*{
         text-align: center;
         margin: 0 auto 5px; 
         width: 80%;
     }
-    .product_face ol li div{
+    .product_face ol li a div{
         width: 90%; margin: 0 auto; overflow: hidden; height: 50px;
     }
-    .product_face ol li div::after{
+    .product_face ol li a div::after{
         content: ''; display: block; clear: both; visibility: hidden;
     }
-    .product_face ol li div span{
+    .product_face ol li a div span{
         height: 50px; display: block; float: left; 
         transition: transform 0.2s ease-in-out; 
         transform: translateY(50px);
         box-sizing: border-box; border: 1px solid rgba(73, 73, 73, 0.1); background-color: #ffffff;
         line-height: 50px;
     }
-    .product_face ol li:hover div span{
+    .product_face ol li:hover a div span{
         transform: translateY(0px);
     }
     span.PD_cart{
-        width: 69%; padding: 0 23%; 
+        width: 65%; padding: 0 23%; 
     }
     span.PD_cart:hover{
         background: #feb900; transition: 0.3s; 
     }
     span.PD_heart{
-        width: 27%; margin-left: 10px; padding: 0 10%;
+        width: 29%; margin-left: 10px; padding: 0 10%;
     }
     span.PD_heart img{
-        width: 100%; max-width: 20px; vertical-align: middle;
+        width: 100%; vertical-align: middle;
     }
 
     
@@ -284,48 +286,53 @@
         width: 25%;
         cursor: pointer;
     }
+    
+    .product_face ol li a{
+        display: block; width: 100%; color: #000000;
+    }
     .product_face ol li:hover::after{
         transform: translateY(0px);
     }
-    .product_face ol li>img{
+    .product_face ol li a>img{
         width: 100%; max-width: 340px; padding-top: 50px; box-sizing: border-box;
     }
-    .product_face ol li dl{
+    .product_face ol li a dl{
         margin-bottom: 10px; line-height: 1.3rem;
     }
-    .product_face ol li dl>*{
+    .product_face ol li a dl>*{
         text-align: center;
         margin: 0 auto 5px; 
         width: 80%;
     }
-    .product_face ol li div{
+    .product_face ol li a div{
         width: 90%; margin: 0 auto; overflow: hidden; height: 50px;
     }
-    .product_face ol li div::after{
+    .product_face ol li a div::after{
         content: ''; display: block; clear: both; visibility: hidden;
     }
-    .product_face ol li div span{
+    .product_face ol li a div span{
         height: 50px; display: block; float: left; 
         transition: transform 0.2s ease-in-out; 
         transform: translateY(50px);
         box-sizing: border-box; border: 1px solid rgba(73, 73, 73, 0.1); background-color: #ffffff;
         line-height: 50px;
     }
-    .product_face ol li:hover div span{
+    .product_face ol li:hover a div span{
         transform: translateY(0px);
     }
     span.PD_cart{
-        width: 69%; padding: 0 23%; 
+        width: 65%; padding: 0 23%; 
     }
     span.PD_cart:hover{
         background: #feb900; transition: 0.3s; 
     }
     span.PD_heart{
-        width: 27%; margin-left: 10px; padding: 0 10%;
+        width: 29%; margin-left: 10px; padding: 0 10%;
     }
     span.PD_heart img{
-        width: 100%; max-width: 20px; vertical-align: middle;
+        width: 100%; vertical-align: middle;
     }
+
 }
 
 @media screen and (min-width: 1000px){
@@ -441,49 +448,53 @@
         content: ''; display: block; background: rgba(238, 238, 238, 1); transition: 0.2s ease-in-out;
         transform: translateY(510px);
     }
+    
     .product_face ol li{
         display: none; 
         flex-wrap: wrap;
         align-content: center;
         flex-direction: column; transition: background-color 0.1s ease-in-out;
-        min-height: 500px; 
+        min-height: 540px; 
         list-style: none; box-sizing: border-box;
         min-width: 200px; 
         width: 25%;
         cursor: pointer;
     }
+    .product_face ol li a{
+        display: block; width: 100%; color: #000000;
+    }
     .product_face ol li:hover::after{
         transform: translateY(0px);
     }
-    .product_face ol li>img{
-        width: 100%; max-width: 340px; padding-top: 100px; box-sizing: border-box;
+    .product_face ol li a>img{
+        width: 100%; box-sizing: border-box; padding-top: 50px;
     }
-    .product_face ol li dl{
+    .product_face ol li a dl{
         margin-bottom: 10px; line-height: 1.5rem;
     }
-    .product_face ol li dl>*{
+    .product_face ol li a dl>*{
         text-align: center;
         margin: 0 auto; 
         width: 80%;
     }
-    .product_face ol li div{
+    .product_face ol li a div{
         width: 90%; margin: 0 auto; overflow: hidden; height: 50px;
     }
-    .product_face ol li div::after{
+    .product_face ol li a div::after{
         content: ''; display: block; clear: both; visibility: hidden;
     }
-    .product_face ol li div span{
+    .product_face ol li a div span{
         height: 50px; display: block; float: left; 
         transition: transform 0.2s ease-in-out; 
         transform: translateY(50px);
         box-sizing: border-box; border: 1px solid rgba(73, 73, 73, 0.1); background-color: #ffffff;
         line-height: 50px;
     }
-    .product_face ol li:hover div span{
+    .product_face ol li:hover a div span{
         transform: translateY(0px);
     }
     span.PD_cart{
-        width: 69%; padding: 0 23%; 
+        width: 65%; padding: 0 23%; 
     }
     span.PD_cart:hover{
         background: #feb900; transition: 0.3s; 
