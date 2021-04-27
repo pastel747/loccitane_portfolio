@@ -40,7 +40,7 @@ function hambmenuClick(){
 
 
 function swiperSetting2(){
-  var swiper2 = new Swiper('.name1', {
+  var swiper2 = new Swiper('.best_pop', {
       slidesPerView: 1,
       navigation: {
           nextEl: '.bn1-1',
@@ -95,7 +95,7 @@ function bestSellerClick(){
 
 
         if(testIndex == 0){
-          var swiper2 = new Swiper('.name1', {
+          var swiper2 = new Swiper('.best_pop', {
             slidesPerView: 1,
             navigation: {
                 nextEl: '.bn1-1',
@@ -115,7 +115,7 @@ function bestSellerClick(){
             }
             });
         }else if(testIndex == 1){
-          var swiper3 = new Swiper('.name2', {
+          var swiper3 = new Swiper('.best_reco', {
             slidesPerView: 1,
             navigation: {
                 nextEl: '.bn2-1',
@@ -135,7 +135,7 @@ function bestSellerClick(){
             }
             });
         }else if(testIndex == 2){
-          var swiper4 = new Swiper('.name3', {
+          var swiper4 = new Swiper('.best_gift', {
             slidesPerView: 1,
             navigation: {
                 nextEl: '.bn3-1',
